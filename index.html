@@ -1,52 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Under Construction</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Bark Avenue Inn | Coming Soon</title>
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        background-color: #f4f4f4;
-        color: #333;
-      }
-      .container {
-        margin: 50px auto;
-        padding: 20px;
-        max-width: 600px;
-      }
-      h1 {
-        font-size: 3em;
-        margin-bottom: 20px;
-        color: #f39c12;
-      }
-      p {
-        font-size: 1.2em;
-        color: #555;
-      }
-      .construction-image {
-        width: 100%;
-        max-width: 400px;
-        margin: 20px auto;
-      }
-      .coming-soon {
-        font-size: 1.5em;
-        margin-top: 30px;
-        color: #e74c3c;
-      }
+        /* Font Styles */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Playfair Display', serif;
+            background-color: #F4F4F4;
+            color: #2C5F2D;
+        }
+
+        .container {
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #2C5F2D;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            color: #F1C232;
+            font-family: 'Open Sans', sans-serif;
+            margin-bottom: 40px;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #707070;
+            font-family: 'Open Sans', sans-serif;
+            margin-bottom: 60px;
+        }
+
+        .construction-icon {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 20px;
+        }
+
+        .coming-soon {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #2C5F2D;
+            margin-bottom: 20px;
+        }
+
+        .coming-date {
+            font-size: 2em;
+            color: #F1C232;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 40px;
+        }
+
+        .footer {
+            margin-top: 60px;
+            font-size: 0.9em;
+            color: #707070;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .footer a {
+            color: #2C5F2D;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .coming-soon {
+                font-size: 2em;
+            }
+
+            .coming-date {
+                font-size: 1.5em;
+            }
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
+
     <div class="container">
-      <h1>Bark Avenue Inn - Under Construction</h1>
-      <img
-        src="https://images.pexels.com/photos/211122/pexels-photo-211122.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-        alt="Under Construction"
-        class="construction-image"
-      />
-      <p>We're working hard to bring you something PAW'some!</p>
-      <p class="coming-soon">Coming Soon in 2025!</p>
+        <img src="construction-icon.png" alt="Under Construction" class="construction-icon">
+        <h1>The Bark Avenue Inn</h1>
+        <h2>Luxury Dog Boarding</h2>
+        <p>We are currently working on something PAW'some! Our site is under construction and will be live soon.</p>
+        <div class="coming-soon">Coming Soon</div>
+        <div class="coming-date">Launching Early in 2025</div>
     </div>
-  </body>
+
+    <div class="footer">
+        <p>&copy; 2024 The Bark Avenue Inn. All rights reserved.</p>
+        <p>Follow us on <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">Twitter</a></p>
+    </div>
+
+</body>
 </html>
