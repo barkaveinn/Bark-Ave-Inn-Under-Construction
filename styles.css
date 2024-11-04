@@ -1,1 +1,20 @@
+/* Hero Section Styles */
+.hero { /* hero styles here */ }
+.hero-image { /* hero image styles here */ }
+.hero-overlay { /* hero overlay styles here */ }
+.cta-button { /* CTA button styles here */ }
+
+/* Service Section Styles */
+.services { /* services styles here */ }
+.service-item { /* individual service item styles here */ }
+
+/* Testimonial Section Styles */
+.testimonials { /* testimonials styles here */ }
+.carousel { /* carousel styles here */ }
+.testimonial-item { /* testimonial item styles here */ }
+
+/* Footer Styles */
+.footer { /* footer styles here */ }
+.footer-content { /* footer content styles here */ }
+.social-icons img { /* social icons styles here */ }
 
