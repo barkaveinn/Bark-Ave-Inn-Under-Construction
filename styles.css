@@ -1,20 +1,41 @@
-/* Hero Section Styles */
-.hero { /* hero styles here */ }
-.hero-image { /* hero image styles here */ }
-.hero-overlay { /* hero overlay styles here */ }
-.cta-button { /* CTA button styles here */ }
+.hero {
+    position: relative;
+    text-align: center;
+    color: #fff;
+}
 
-/* Service Section Styles */
-.services { /* services styles here */ }
-.service-item { /* individual service item styles here */ }
+.hero-image {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+}
 
-/* Testimonial Section Styles */
-.testimonials { /* testimonials styles here */ }
-.carousel { /* carousel styles here */ }
-.testimonial-item { /* testimonial item styles here */ }
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adds dark overlay */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-/* Footer Styles */
-.footer { /* footer styles here */ }
-.footer-content { /* footer content styles here */ }
-.social-icons img { /* social icons styles here */ }
+.cta-button {
+    background-color: #ffd700;
+    color: #000;
+    padding: 12px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #daa520; /* Golden rod on hover */
+}
+
 
