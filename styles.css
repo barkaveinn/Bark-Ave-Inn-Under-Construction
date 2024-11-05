@@ -38,6 +38,21 @@
     background-color: #daa520; /* Golden rod on hover */
 }
 
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+    margin-top: 20px; /* Space below the Explore Services button */
+}
+
+.button-container a img {
+    border-radius: 5px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.button-container a img:hover {
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
 
 .services {
     display: flex;
