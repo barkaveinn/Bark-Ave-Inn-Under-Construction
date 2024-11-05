@@ -66,3 +66,36 @@
 .service-item p {
     color: #666;
 }
+
+.testimonials {
+    background-color: #333;
+    color: #fff;
+    padding: 50px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ffd700;
+}
+
+.carousel {
+    display: flex;
+    overflow: auto;
+}
+
+.testimonial-item {
+    flex: 0 0 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    font-style: italic;
+}
+
+.testimonial-item span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #daa520;
+}
