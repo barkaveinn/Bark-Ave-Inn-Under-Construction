@@ -136,3 +136,77 @@
 .social-icons img:hover {
     opacity: 1;
 }
+
+/* General styles remain the same */
+
+@media (max-width: 768px) {
+    /* Adjust hero section for mobile */
+    .hero {
+        height: 60vh; /* Reduce height to fit mobile screens */
+    }
+
+    .hero-image {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .hero-overlay {
+        padding: 10px;
+        margin-bottom: 20px; /* Adjust bottom spacing for mobile */
+    }
+
+    h1 {
+        font-size: 1.8em; /* Reduce font size for smaller screens */
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .cta-button {
+        font-size: 1em;
+        padding: 8px 16px;
+        margin-bottom: 15px; /* Adjust spacing */
+    }
+
+    /* Stack Doggie Dashboard buttons on mobile */
+    .button-container {
+        flex-direction: column; /* Stack the buttons vertically */
+        gap: 10px; /* Space between stacked buttons */
+        align-items: center; /* Center-align the buttons */
+    }
+
+    /* Service Section Adjustments */
+    .services {
+        display: grid;
+        grid-template-columns: 1fr; /* Stack services vertically on mobile */
+        gap: 20px;
+        padding: 20px; /* Add padding around the services section */
+    }
+
+    .service-item img {
+        width: 100%; /* Ensure images are full width on mobile */
+        height: auto;
+    }
+
+    .footer-content {
+        font-size: 0.8em;
+        padding: 10px;
+    }
+}
+
+/* Extra small screens or portrait phones */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    .cta-button, .button-container a {
+        font-size: 0.9em;
+        padding: 8px 12px; /* Smaller padding for compact buttons */
+    }
+}
