@@ -99,3 +99,25 @@
     font-weight: bold;
     color: #daa520;
 }
+
+.footer {
+    background-color: #444;
+    color: #ddd;
+    padding: 30px;
+    text-align: center;
+}
+
+.footer-content p {
+    margin: 5px 0;
+}
+
+.social-icons img {
+    width: 30px;
+    margin: 0 10px;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.social-icons img:hover {
+    opacity: 1;
+}
