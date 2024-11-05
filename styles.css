@@ -126,6 +126,15 @@
     margin: 5px 0;
 }
 
+.footer-email {
+    color: inherit; /* Inherits color from surrounding text */
+    text-decoration: none; /* Removes underline for a cleaner look */
+}
+
+.footer-email:hover {
+    text-decoration: underline; /* Optional: underline on hover */
+}
+
 .social-icons img {
     width: 30px;
     margin: 0 10px;
