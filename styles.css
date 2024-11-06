@@ -275,10 +275,4 @@
     }
 }
 
-/* Further reduction for extra small screens, if needed */
-@media (max-width: 480px) {
-    .service-item img {
-        width: 30px; /* Smaller size for very small screens */
-        height: auto;
-    }
-}
+
