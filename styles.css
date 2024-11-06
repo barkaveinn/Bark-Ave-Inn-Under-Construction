@@ -2,6 +2,11 @@
     position: relative;
     text-align: center;
     color: #fff;
+    padding: 20px;
+    background: linear-gradient(45deg, #ffd700, #daa520); /* Gradient background */
+    border: 5px double #b8860b; /* Double border with a darker golden color */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow for depth */
 }
 
 .hero-image {
