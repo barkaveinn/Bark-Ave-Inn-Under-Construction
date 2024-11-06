@@ -275,4 +275,21 @@
     }
 }
 
+@media (max-width: 768px) {
+    .service-item img {
+        width: 50px; /* Reduce the icon size on mobile */
+        margin-bottom: 5px; /* Adjust space below the icon */
+    }
+
+    .service-item h2 {
+        font-size: 1.3em; /* Adjust font size for headings */
+        margin-top: 3px; /* Reduce space above the heading */
+        margin-bottom: 3px; /* Reduce space below the heading */
+    }
+
+    .service-item p {
+        font-size: 0.9em; /* Optionally adjust font size for description */
+        margin-top: 3px; /* Adjust space above the description */
+    }
+}
 
