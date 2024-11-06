@@ -266,3 +266,19 @@
         padding: 8px 12px; /* Smaller padding for compact buttons */
     }
 }
+
+/* Target screens smaller than 768px (typical mobile) */
+@media (max-width: 768px) {
+    .service-item img {
+        width: 40px; /* Adjust to desired size */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+/* Further reduction for extra small screens, if needed */
+@media (max-width: 480px) {
+    .service-item img {
+        width: 30px; /* Smaller size for very small screens */
+        height: auto;
+    }
+}
