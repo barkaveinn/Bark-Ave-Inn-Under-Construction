@@ -4,16 +4,25 @@ const descriptionBar = document.getElementById('descriptionBar');
 let currentIndex = 0;
 let autoCycle;
 
+
 // Function to update the display image
 function updateContent(item) {
     const imageSrc = item.getAttribute('data-image');
     const descriptionText = item.getAttribute('data-description');
     displayImage.src = imageSrc;
-    descriptionBar.textContent = descriptionText;
+    descriptionBar.textContent = descriptionText; // Update description text
     
     serviceItems.forEach(el => el.classList.remove('active'));
     item.classList.add('active');
 }
+
+serviceItems.forEach((item, index) => {
+    item.addEventListener('mouseover', () => {
+        clearInterval(autoCycle);
+        updateContent(item);
+    });
+    item.addEventListener('mouseout', () => startAutoCycle());
+});
 
 // Mouse hover event
 serviceItems.forEach((item, index) => {
