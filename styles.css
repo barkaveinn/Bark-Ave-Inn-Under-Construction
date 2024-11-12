@@ -193,6 +193,52 @@
     opacity: 1;
 }
 
+
+.service-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: auto;
+}
+
+.service-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.service-list li {
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.service-list li:hover {
+    color: #0056b3; /* Change color on hover */
+}
+
+.service-list li:hover::after {
+    content: "→";
+    position: absolute;
+    right: 10px;
+    font-size: 1.2em;
+    color: #0056b3;
+}
+
+.service-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+
+
 /* General styles remain the same */
 
 @media (max-width: 768px) {
