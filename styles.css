@@ -194,10 +194,20 @@
 }
 
 
-/* Style the service list and its items */
+/* Style the main container */
+.service-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px; /* Adjust spacing as needed */
+
+
+
+
+/* Style the service list */
 .service-list {
     list-style: none;
     padding: 0;
+    max-width: 200px; /* Width of the service list */
 }
 
 .service-list li {
@@ -232,7 +242,7 @@
 /* Style the image container and image */
 .image-container {
     position: relative;
-    max-width: 400px; /* Reduce image size */
+    width: 400px; /* Adjust width as needed */
     margin-top: 20px;
 }
 
@@ -259,7 +269,6 @@
 .image-container:hover .description-bar {
     opacity: 1; /* Show the bar on hover */
 }
-
 
 
 
