@@ -1,13 +1,16 @@
 const serviceItems = document.querySelectorAll('.service-list li');
 const displayImage = document.getElementById('displayImage');
+const descriptionBar = document.getElementById('descriptionBar');
 let currentIndex = 0;
 let autoCycle;
 
 // Function to update the display image
-function updateImage(item) {
+function updateContent(item) {
     const imageSrc = item.getAttribute('data-image');
+    const descriptionText = item.getAttribute('data-description');
     displayImage.src = imageSrc;
-    // Highlight the active item
+    descriptionBar.textContent = descriptionText;
+    
     serviceItems.forEach(el => el.classList.remove('active'));
     item.classList.add('active');
 }
@@ -16,7 +19,7 @@ function updateImage(item) {
 serviceItems.forEach((item, index) => {
     item.addEventListener('mouseover', () => {
         clearInterval(autoCycle);
-        updateImage(item);
+        updateContent(item);
     });
     item.addEventListener('mouseout', () => startAutoCycle());
 });
@@ -25,8 +28,8 @@ serviceItems.forEach((item, index) => {
 function startAutoCycle() {
     autoCycle = setInterval(() => {
         currentIndex = (currentIndex + 1) % serviceItems.length;
-        updateImage(serviceItems[currentIndex]);
-    }, 5000); // Adjust time as needed
+        updateContent(serviceItems[currentIndex]);
+    }, 5000);
 }
 
 // Start the automatic cycling
