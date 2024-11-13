@@ -8,23 +8,7 @@ let autoCycle;
 
 
 // Function to update the display image
-function updateContent(item) {
-    const imageSrc = item.getAttribute('data-image');
-    const descriptionText = item.getAttribute('data-description');
-    displayImage.src = imageSrc;
-    descriptionBar.textContent = descriptionText; // Update description text
-    
-    serviceItems.forEach(el => el.classList.remove('active'));
-    item.classList.add('active');
-}
 
-serviceItems.forEach((item, index) => {
-    item.addEventListener('mouseover', () => {
-        clearInterval(autoCycle);
-        updateContent(item);
-    });
-    item.addEventListener('mouseout', () => startAutoCycle());
-});
 
 // Mouse hover event
 serviceItems.forEach((item, index) => {
@@ -37,26 +21,28 @@ serviceItems.forEach((item, index) => {
 
 // Automatic cycling through items
 function startAutoCycle() {
+    clearInterval(autoCycle); // Ensure no overlapping intervals
     autoCycle = setInterval(() => {
         currentIndex = (currentIndex + 1) % serviceItems.length;
         updateContent(serviceItems[currentIndex]);
-    }, 8000); // Adjust this interval to control the time between cycles
+    }, 8000); // Adjust interval as needed
 }
+
 
 
 function updateContent(item) {
-    // Temporarily hide the current image
+    // Temporarily hide the current image for fade-out effect
     serviceImageContainer.classList.remove('show');
 
     setTimeout(() => {
-        // Update the image source and text after fade-out
-        serviceImage.src = item.image;
-        serviceText.innerText = item.text;
+        displayImage.src = item.getAttribute('data-image');
+        descriptionBar.textContent = item.getAttribute('data-description');
 
-        // Fade the new image in
+        // Add the .show class back to fade in the new image
         serviceImageContainer.classList.add('show');
-    }, 500); // Adjust this delay to match the CSS transition time
+    }, 500); // Matches CSS fade-out duration
 }
+
 // Start the automatic cycling
 startAutoCycle();
 
