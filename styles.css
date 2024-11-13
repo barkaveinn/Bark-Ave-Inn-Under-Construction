@@ -196,21 +196,40 @@
 
 
 /* Style the main container */
-.service-container {
+.service-list-container {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 20px; /* Adjust spacing as needed */
-    padding: 40px;
+    gap: 20px;
+    width: 100%;
 }
 
+/* Display area for initial image and welcome text */
+.image-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+}
 
+.initial-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
 
+#welcomeText {
+    font-size: 1em;
+    color: #2C5F2D;
+    margin-top: 10px;
+}
 
 /* Style the service list */
 .service-list {
     list-style-type: none;
     padding: 0;
+    width: 40%;
 }
 
 .service-list li {
@@ -223,7 +242,6 @@
 
 .service-list li:hover {
     color: #d1b89d;
-    transform: scale(1.1); /* Expand text on hover */
 }
 
 .service-list li::after {
@@ -245,12 +263,13 @@
 
 /* Style the image container and image */
 
+/* Container for the active image and description */
 .image-display {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    width: 400px;
-    text-align: center;
+    justify-content: center;
+    width: 60%;
+    text-align: left;
 }
 
 .initial-image {
