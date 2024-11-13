@@ -270,6 +270,17 @@
     opacity: 1; /* Show the bar on hover */
 }
 
+.service-image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Adjust duration as needed */
+}
+
+.service-image-container.show {
+    opacity: 1;
+}
 
 
 
