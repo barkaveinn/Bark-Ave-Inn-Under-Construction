@@ -38,7 +38,7 @@ function startAutoCycle() {
     autoCycle = setInterval(() => {
         currentIndex = (currentIndex + 1) % serviceItems.length;
         updateContent(serviceItems[currentIndex]);
-    }, 5000);
+    }, 8000);
 }
 
 // Start the automatic cycling
