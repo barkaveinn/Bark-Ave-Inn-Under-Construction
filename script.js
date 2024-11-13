@@ -60,7 +60,7 @@ function updateContent(item) {
     clearTimeout(resetTimer);
 
     // Reset the default image after 4 seconds of inactivity
-    resetTimer = setTimeout(resetToDefault, 4000);
+    resetTimer = setTimeout(resetToDefault, 8000);
 }
 
 // Function to reset back to default image and text
