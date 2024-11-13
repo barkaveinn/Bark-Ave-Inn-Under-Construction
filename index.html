@@ -1,48 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>The Bark Avenue Inn</title>
+    <title>The Bark Avenue Inn | Launching Soon</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Other meta tags or links, if any -->
 
-    
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "The Bark Avenue Inn | Launching Soon",
-  "description": "The Bark Avenue Inn's website is under construction. We're launching our premium dog boarding services in January 2025. Bookings available now through Doggie Dashboard.",
-  "url": "https://www.barkaveinn.com",
-  "isPartOf": {
-    "@type": "Website",
-    "name": "The Bark Avenue Inn"
-  }
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "The Bark Avenue Inn",
-  "url": "https://www.barkaveinn.com",
-  "sameAs": [
-    "https://www.instagram.com/bark_avenue_inn"
-  ],
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "contactType": "Customer Service",
-    "url": "https://doggiedashboard.com/users/0aa6aad897"
-  }
-}
-</script>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="The Bark Avenue Inn is under construction, preparing to offer premium dog boarding services in January 2025. Book stays through Doggie Dashboard now, and follow us on Instagram for updates!">
-    <title>The Bark Avenue Inn | Website Lunching Soon</title>
-    <title>The Bark Avenue Inn - Premium Dog Boarding (Launching 2025)</title>
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "The Bark Avenue Inn | Launching Soon",
+      "description": "The Bark Avenue Inn's website is under construction. We're launching our premium dog boarding services in January 2025. Bookings available now through Doggie Dashboard.",
+      "url": "https://www.barkaveinn.com",
+      "isPartOf": {
+        "@type": "Website",
+        "name": "The Bark Avenue Inn"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "The Bark Avenue Inn",
+      "url": "https://www.barkaveinn.com",
+      "sameAs": [
+        "https://www.instagram.com/bark_avenue_inn"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "url": "https://doggiedashboard.com/users/0aa6aad897"
+      }
+    }
+    </script>
+
     <style>
         /* Font Styles */
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400&display=swap');
@@ -66,31 +64,11 @@
             margin-bottom: 10px;
         }
 
-        h2 {
-            font-size: 1.5em;
-            color: #F1C232;
-            font-family: 'Open Sans', sans-serif;
-            margin-bottom: 40px;
-        }
-
-        h3 {
-            font-size: 1em;
-            color: #F1C232;
-            font-family: 'Open Sans', sans-serif;
-            margin-bottom: 40px;
-        }
-        
         p {
             font-size: 1em;
             color: #b7b7b7;
             font-family: 'Open Sans', sans-serif;
             margin-bottom: 60px;
-        }
-
-        .construction-icon {
-            width: 200px;
-            height: 200px;
-            margin-bottom: 20px;
         }
 
         .coming-soon {
@@ -100,27 +78,11 @@
             margin-bottom: 20px;
         }
 
-        .coming-date {
-            font-size: 2em;
-            color: #F1C232;
-            font-family: 'Playfair Display', serif;
-            margin-bottom: 40px;
-        }
-
         .footer {
             margin-top: 60px;
             font-size: 0.9em;
             color: #707070;
             font-family: 'Open Sans', sans-serif;
-        }
-
-        .footer a {
-            color: #2C5F2D;
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
         }
 
         /* Responsive Design */
@@ -132,193 +94,80 @@
             .coming-soon {
                 font-size: 2em;
             }
-
-            .coming-date {
-                font-size: 1.5em;
-            }
         }
     </style>
 </head>
+
 <body>
 <section class="hero">
-    <img src=images/pexels-ron-lach-10117507.jpg alt="Premium Dog Boarding" class="hero-image">
+    <img src="images/pexels-ron-lach-10117507.jpg" alt="Premium Dog Boarding" class="hero-image">
     <div class="hero-overlay">
         <h1>The Bark Avenue Inn</h1>
         <h1>Coming January 2025</h1>
         <p>A Boutique Stay for Your Best FUR'iend</p>
+        
         <!-- <a href="#services" class="cta-button">Explore Services</a> -->
-    <!-- New Pricing Button -->    
+        
         <a href="javascript:void(0);" class="cta-button" id="viewPricingButton">2025 Rates</a>
         
         <div class="button-container">
             <a href="https://doggiedashboard.com/users/0aa6aad897/new_client" target="_blank"><img width="200" src="https://d3pzb2kzibri67.cloudfront.net/assets/client-form-button.png"></a>
-       <!-- <a href="https://doggiedashboard.com/users/0aa6aad897" target="_blank"><img width="200" src="https://d3pzb2kzibri67.cloudfront.net/assets/schedule-appt-button.png"></a> -->
+            <!-- <a href="https://doggiedashboard.com/users/0aa6aad897" target="_blank"><img width="200" src="https://d3pzb2kzibri67.cloudfront.net/assets/schedule-appt-button.png"></a> -->
+        </div>
     </div>
-</div>
 </section>
 
 <!-- Modal Structure -->
 <div id="pricingModal" class="modal">
     <div class="modal-content">
         <span class="close-button" id="closeModal">&times;</span>
-        <!-- <h2>Pricing</h2> -->
-        <img src=images/Bark-Avenue-Inn-4.png alt="Pricing Table" class="pricing-image"> 
-        <!-- Or use an embedded PDF like this -->
-        <!-- <embed src="your-canva-pdf-link.pdf" width="100%" height="600px" /> -->
+        <img src="images/Bark-Avenue-Inn-4.png" alt="Pricing Table" class="pricing-image">
     </div>
-</div>    
+</div>
+
 <script>
-    // Get the modal
     var modal = document.getElementById("pricingModal");
-
-    // Get the button that opens the modal
     var btn = document.getElementById("viewPricingButton");
-
-    // Get the <span> element that closes the modal
     var span = document.getElementById("closeModal");
 
-    // When the user clicks the button, open the modal
     btn.onclick = function() {
         modal.style.display = "block";
     }
 
-    // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
         modal.style.display = "none";
     }
 
-    // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
         }
     }
 </script>
-    
-</section>
 
-    <div class="service-container">
-        <ul class="service-list">
-            <li data-image="images/pexels-barnabas-davoti-31615494-12503322.jpg">Premium Overnight Stay</li>
-            <li data-image="images/pexels-daycare.jpg">Doggie Daycare</li>
-            <li data-image="images/pexels-weddingdog.jpg">Wedding-Dog Concierge Service</li>
-            <li data-image="images/pexels-walking.jpg">Dog Walking</li>
-            
-            <!-- Add more services as needed -->
-        </ul>
+<div class="service-container">
+    <ul class="service-list">
+        <li data-image="images/pexels-barnabas-davoti-31615494-12503322.jpg">Premium Overnight Stay</li>
+        <li data-image="images/pexels-daycare.jpg">Doggie Daycare</li>
+        <li data-image="images/pexels-weddingdog.jpg">Wedding-Dog Concierge Service</li>
+        <li data-image="images/pexels-walking.jpg">Dog Walking</li>
+    </ul>
     <div class="image-container">
         <img id="displayImage" src="images/pexels-barnabas-davoti-31615494-12503322.jpg" alt="Service Image">
-        <div class="description-bar" id="descriptionBar">Unlike traditional boarding facilities, our truly cage-free environment fosters exploration, socialization, and relaxation. Our overnight guests, enjoy communal or pack-like sleeping arrangements in large open areas, creating a more natural, stress-reducing environment for well-socialized dogs.</div>
+        <div class="description-bar" id="descriptionBar">Unlike traditional boarding facilities, our truly cage-free environment fosters exploration, socialization, and relaxation.</div>
     </div>
 </div>
 
-
-
-    
-<!-- <section id="services" class="services">
-    <div class="service-item">
-        <img src=images/pet-bed.png alt="Boarding">
-        <h3>Premium Overnight Stays</h3>
-        <p>Spacious open areas with premium amenities for your furry friend.</p>
-    </div>
-    <div class="service-item">
-        <img src=images/pet-activity.png alt="Daycare">
-        <h3>Doggie Daycare</h3>
-        <p>A fun, safe environment for play and socialization.</p>
-    </div>
-    <div class="service-item">
-        <img src=images/dog-training.png alt="Training">
-        <h3>Training</h3>
-        <p>Basic obedience and behavioral modification.</p>
-    </div>
-    <div class="service-item">
-        <img src=images/dog-walking.png alt="Walking">
-        <h3>Walking</h3>
-        <p>Let us help you take your pup for a daily stroll.</p>
-    </div>
-    <div class="service-item">
-        <img src=images/Dogs-Silhouette.jpg alt="Wedding-Dog">
-        <h3>Wedding-Dog Concierge Service</h3>
-        <p>We'll bring even more joy to your special day.</p>
-    </div>
-    <div class="service-item">
-        <img src=images/Icons-v3-07.png alt="Pickup/Drop-off">
-        <h3>Pickup & Drop-off</h3>
-        <p>Convenient and safe transport to and from our facility.</p>
-    </div> -->
-</section>
-    
-    <!-- <section class="testimonials">
-    <h3>What Our Clients Say</h3>
-    <div class="carousel">
-        <div class="testimonial-item">
-            <p>“Our pup is fully at home at the Inn.”</p>
-            <span>- Amy P.</span>
-        </div>
-        <div class="testimonial-item">
-            <p>“This was our first time at the Inn and treated my dog like their own.”</p>
-            <span>- Jennifer L.</span>
-        </div>
-        <div class="testimonial-item">
-            <p>“I see first hand the love and attention given to each of these dogs that stay here.”</p>
-            <span>- SHaron K.</span>
-        </div>
-        <div class="testimonial-item">
-            <p>“It was a blessing to travel and know that our pup was loved and cared for while we were away.”</p>
-            <span>- Stacy P.</span>
-        </div>
-        <!-- Add more testimonial items as needed -->
-    </div> -->
-</section>
-
-<!--    <footer class="footer">
-    <div class="footer-content">
-        <p>&copy; 2024 The Bark Avenue Inn, LLC. All Rights Reserved. | Email: <a href="mailto:barkavenueinn@gmail.com">barkavenueinn@gmail.com</a> | Phone: (516) 500-1966</p>
-        <div class="social-icons">
-            <p>Follow us on Instagram for updates!</p>
-<a href="https://www.instagram.com/bark_avenue_inn" target="_blank" style="text-decoration: none;">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 40px; height: 40px;">
-</a></p>
-        </div>
-    </div>
-</footer> -->
 <footer class="footer">
     <div class="footer-content">
         <p>&copy; 2024 The Bark Avenue Inn, LLC. All Rights Reserved. | Email: <a href="mailto:barkavenueinn@gmail.com">barkavenueinn@gmail.com</a> | Phone: (516) 500-1966</p>
         <div class="social-icons">
-            <p>Follow us on social media for updates!</p>
+            <p>Follow us on Instagram for updates!</p>
             <a href="https://www.instagram.com/bark_avenue_inn" target="_blank" style="text-decoration: none;">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 40px; height: 40px;">
-            </a>
-           <!--  <a href="https://www.facebook.com/profile.php?id=100057573814293" target="_blank" style="text-decoration: none;">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" style="width: 40px; height: 40px; margin-left: 10px;"> -->
             </a>
         </div>
     </div>
 </footer>
-
-    
-    <!--<div class="container">
-        <img src="https://images.pexels.com/photos/4297821/pexels-photo-4297821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="construction-icon">
-        <h1>The Bark Avenue Inn</h1>
-        <h2>A Boutique Stay for Your Best FUR'iend</h2>
-        <p>We’re getting ready to welcome you to The Bark Avenue Inn—your best fur'iend’s boutique home-away-from-home for luxury overnight boarding and daily stays. Our full website launches early 2025 with exciting features, but you can still book with us now!</p>
-        <p>For booking, click below, and stay tuned for updates on our opening and services. We look forward to providing you with a premium experience!</p>
-        <div class="coming-soon">Coming Soon</div>
-        <div class="coming-date">Launching Early in 2025</div>
-        <a href="https://doggiedashboard.com/users/0aa6aad897/new_client" target="_blank"><img width="200" src="https://d3pzb2kzibri67.cloudfront.net/assets/client-form-button.png"></a>
-        <a href="https://doggiedashboard.com/users/0aa6aad897" target="_blank"><img width="200" src="https://d3pzb2kzibri67.cloudfront.net/assets/schedule-appt-button.png"></a>
-    </div>
-
-    <div class="footer">
-        <p>&copy; 2024 The Bark Avenue Inn,LLC. All rights reserved.</p>
-        <p>Follow us on Instagram for updates!</p>
-<a href="https://www.instagram.com/bark_avenue_inn" target="_blank" style="text-decoration: none;">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 40px; height: 40px;">
-</a></p>
-    </div>-->
-
-    <script src="script.js"></script>
-
 </body>
 </html>
