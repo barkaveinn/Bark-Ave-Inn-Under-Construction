@@ -9,38 +9,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="The Bark Avenue Inn is under construction, preparing to offer premium dog boarding services in January 2025. Book stays through Doggie Dashboard now, and follow us on Instagram for updates!">
 
-    <!-- Schema.org structured data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "The Bark Avenue Inn | Launching Soon",
-      "description": "The Bark Avenue Inn's website is under construction. We're launching our premium dog boarding services in January 2025. Bookings available now through Doggie Dashboard.",
-      "url": "https://www.barkaveinn.com",
-      "isPartOf": {
-        "@type": "Website",
-        "name": "The Bark Avenue Inn"
-      }
-    }
-    </script>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "The Bark Avenue Inn",
-      "url": "https://www.barkaveinn.com",
-      "sameAs": [
-        "https://www.instagram.com/bark_avenue_inn"
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "Customer Service",
-        "url": "https://doggiedashboard.com/users/0aa6aad897"
-      }
-    }
-    </script>
-
     <style>
         /* Font Styles */
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400&display=swap');
@@ -53,36 +21,118 @@
             color: #2C5F2D;
         }
 
-        .container {
+        /* Hero Section */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-image: url('images/pexels-ron-lach-10117507.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .hero-overlay {
             text-align: center;
-            padding: 100px 20px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
         }
 
         h1 {
             font-size: 3em;
-            color: #d1b89d;
             margin-bottom: 10px;
         }
 
         p {
             font-size: 1em;
-            color: #b7b7b7;
-            font-family: 'Open Sans', sans-serif;
-            margin-bottom: 60px;
-        }
-
-        .coming-soon {
-            font-size: 2.5em;
-            font-weight: bold;
-            color: #2C5F2D;
             margin-bottom: 20px;
         }
 
-        .footer {
-            margin-top: 60px;
-            font-size: 0.9em;
+        .cta-button {
+            background-color: #d1b89d;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+        }
+
+        .cta-button:hover {
+            background-color: #2C5F2D;
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .service-container {
+            padding: 50px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .service-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+
+        .service-list li {
+            cursor: pointer;
+            margin: 10px 0;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        .service-list li:hover {
+            color: #d1b89d;
+        }
+
+        .image-display {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        #displayImage {
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .description-bar {
+            margin-top: 20px;
+            font-size: 1.1em;
             color: #707070;
-            font-family: 'Open Sans', sans-serif;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .footer {
+            padding: 40px 20px;
+            background-color: #2C5F2D;
+            color: white;
+            text-align: center;
+        }
+
+        .footer-content p {
+            margin-bottom: 10px;
+        }
+
+        .social-icons img {
+            width: 40px;
+            height: 40px;
+            margin: 0 10px;
         }
 
         /* Responsive Design */
@@ -91,28 +141,32 @@
                 font-size: 2em;
             }
 
-            .coming-soon {
-                font-size: 2em;
+            .cta-button {
+                font-size: 1em;
+                padding: 8px 16px;
+            }
+
+            .service-list li {
+                font-size: 1.1em;
+            }
+
+            #displayImage {
+                max-width: 300px;
             }
         }
     </style>
 </head>
-
 <body>
+
+<!-- Hero Section -->
 <section class="hero">
-    <img src="images/pexels-ron-lach-10117507.jpg" alt="Premium Dog Boarding" class="hero-image">
     <div class="hero-overlay">
         <h1>The Bark Avenue Inn</h1>
         <h1>Coming January 2025</h1>
         <p>A Boutique Stay for Your Best FUR'iend</p>
-        
-        <!-- <a href="#services" class="cta-button">Explore Services</a> -->
-        
         <a href="javascript:void(0);" class="cta-button" id="viewPricingButton">2025 Rates</a>
-        
         <div class="button-container">
             <a href="https://doggiedashboard.com/users/0aa6aad897/new_client" target="_blank"><img width="200" src="https://d3pzb2kzibri67.cloudfront.net/assets/client-form-button.png"></a>
-            <!-- <a href="https://doggiedashboard.com/users/0aa6aad897" target="_blank"><img width="200" src="https://d3pzb2kzibri67.cloudfront.net/assets/schedule-appt-button.png"></a> -->
         </div>
     </div>
 </section>
@@ -145,6 +199,7 @@
     }
 </script>
 
+<!-- Services Section -->
 <div class="service-container">
     <ul class="service-list">
         <li data-image="images/pexels-barnabas-davoti-31615494-12503322.jpg">Premium Overnight Stay</li>
@@ -152,22 +207,30 @@
         <li data-image="images/pexels-weddingdog.jpg">Wedding-Dog Concierge Service</li>
         <li data-image="images/pexels-walking.jpg">Dog Walking</li>
     </ul>
+    <div class="image-display">
+        <img id="serviceImage" src="images/pexels-olly-3771110.jpg" alt="Welcome">
+        <div id="serviceText" class="welcome-text">
+            Welcome to The Bark Avenue Inn. Please click each of the service offerings for more details.
+        </div>
+    </div>
     <div class="image-container">
         <img id="displayImage" src="images/pexels-barnabas-davoti-31615494-12503322.jpg" alt="Service Image">
         <div class="description-bar" id="descriptionBar">Unlike traditional boarding facilities, our truly cage-free environment fosters exploration, socialization, and relaxation.</div>
     </div>
 </div>
 
+<!-- Footer Section -->
 <footer class="footer">
     <div class="footer-content">
         <p>&copy; 2024 The Bark Avenue Inn, LLC. All Rights Reserved. | Email: <a href="mailto:barkavenueinn@gmail.com">barkavenueinn@gmail.com</a> | Phone: (516) 500-1966</p>
         <div class="social-icons">
             <p>Follow us on Instagram for updates!</p>
             <a href="https://www.instagram.com/bark_avenue_inn" target="_blank" style="text-decoration: none;">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 40px; height: 40px;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
             </a>
         </div>
     </div>
 </footer>
+
 </body>
 </html>
