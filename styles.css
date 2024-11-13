@@ -269,7 +269,9 @@
     justify-content: center;
     width: 60%;
     text-align: left;
+    padding: 10px;
 }
+
 
 .initial-image {
     max-width: 100%;
