@@ -156,7 +156,45 @@
         }
     </style>
 </head>
-<body>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const serviceListItems = document.querySelectorAll(".service-list li");
+        const serviceImage = document.getElementById("serviceImage");
+        const serviceText = document.getElementById("serviceText");
+
+        // Default initial image and text
+        const defaultImage = "images/pexels-olly-3771110.jpg";
+        const defaultText = "Welcome to The Bark Avenue Inn. Please click each of the service offerings for more details.";
+
+        // Function to reset to default
+        function resetToDefault() {
+            serviceImage.src = defaultImage;
+            serviceText.textContent = defaultText;
+        }
+
+        // Add event listeners to each service item
+        serviceListItems.forEach(item => {
+            item.addEventListener("click", function () {
+                const imageSrc = this.getAttribute("data-image");
+                const description = this.getAttribute("data-description");
+
+                serviceImage.src = imageSrc;
+                serviceText.textContent = description;
+            });
+        });
+
+        // Reset to default after 4 seconds if no selection
+        let timeout = setTimeout(resetToDefault, 4000);
+
+        // Clear timeout on click, then restart after inactivity
+        document.addEventListener("click", () => {
+            clearTimeout(timeout);
+            timeout = setTimeout(resetToDefault, 4000);
+        });
+    });
+</script>    
+    <body>
 
 <!-- Hero Section -->
 <section class="hero">
