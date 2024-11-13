@@ -198,28 +198,31 @@
 /* Style the main container */
 .service-container {
     display: flex;
+    justify-content: center;
     align-items: flex-start;
     gap: 20px; /* Adjust spacing as needed */
+    padding: 40px;
+}
 
 
 
 
 /* Style the service list */
 .service-list {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
-    max-width: 200px; /* Width of the service list */
 }
 
 .service-list li {
-    padding: 10px;
-    font-weight: bold;
+    padding: 10px 0;
     cursor: pointer;
-    position: relative;
-    transition: transform 0.3s ease;
+    font-size: 1.1em;
+    color: #2C5F2D;
+    transition: color 0.3s;
 }
 
 .service-list li:hover {
+    color: #d1b89d;
     transform: scale(1.1); /* Expand text on hover */
 }
 
@@ -241,6 +244,32 @@
 }
 
 /* Style the image container and image */
+
+.image-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    text-align: center;
+}
+
+.initial-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+#welcomeText {
+    font-size: 1em;
+    color: #2C5F2D;
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
 .image-container {
     position: relative;
     width: 400px; /* Adjust width as needed */
