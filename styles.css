@@ -195,10 +195,13 @@
 }
 
 
-/* Style the main container */
+/* Main container for service list and image display */
 .service-list-container {
     display: flex;
+    justify-content: center;
+    align-items: flex-start;
     gap: 20px;
+    padding: 20px;
     width: 100%;
 }
 
@@ -224,11 +227,11 @@
     margin-top: 10px;
 }
 
-/* Style the service list */
+/* Service list styling */
 .service-list {
     list-style-type: none;
     padding: 0;
-    width: 40%;
+    width: 30%; /* Adjust width to control list size */
 }
 
 .service-list li {
@@ -265,13 +268,11 @@
 /* Container for the active image and description */
 .image-display {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 60%;
-    text-align: left;
-    padding: 10px;
+    width: 60%; /* Adjust width as needed */
+    text-align: center;
 }
-
 
 .initial-image {
     max-width: 100%;
@@ -320,12 +321,13 @@
     opacity: 1; /* Show the bar on hover */
 }
 
+/* Adjust image and description behavior */
 .service-image-container {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: auto;
     opacity: 0;
-    transition: opacity 1s ease-in-out; /* Adjust duration as needed */
+    transition: opacity 1s ease-in-out;
 }
 
 .service-image-container.show {
