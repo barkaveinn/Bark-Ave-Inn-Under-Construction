@@ -209,8 +209,6 @@
     width: auto;
     height: auto;
     border-radius: 8px; /* Optional, for rounded corners */
-    margin-bottom: 20px;
-    text-align: center;
 }
 
 .initial-image {
