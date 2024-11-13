@@ -239,7 +239,8 @@
 }
 
 .service-list li {
-    padding: 10px 0;
+    padding: 5px 0; /* Reduce padding to minimize space */
+    margin: 0; /* Ensure no additional spacing */
     cursor: pointer;
     font-size: 1.1em;
     color: #2C5F2D;
