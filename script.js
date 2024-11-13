@@ -3,49 +3,29 @@ const displayImage = document.getElementById('displayImage');
 const descriptionBar = document.getElementById('descriptionBar');
 const serviceImageContainer = document.querySelector('.service-image-container');
 
-let currentIndex = 0;
-let autoCycle;
-
-// Function to update the displayed image and description
+// Function to update the displayed image and description with a delay
 function updateContent(item) {
     const imageSrc = item.getAttribute('data-image');
     const descriptionText = item.getAttribute('data-description');
 
-    // Temporarily hide image for fade-out effect
+    // Remove the text and show only the image briefly
+    descriptionBar.style.opacity = '0';  // Hide description temporarily
     displayImage.classList.remove('fade-in');
-    
+
+    // Delay to display image first, then show description
     setTimeout(() => {
         displayImage.src = imageSrc;
-        descriptionBar.textContent = descriptionText;
         displayImage.classList.add('fade-in');
-    }, 300); // Matches CSS fade-out duration
 
-    // Update active class for the selected item
-    serviceItems.forEach(el => el.classList.remove('active'));
-    item.classList.add('active');
+        // After the image fades in, show the description with a slight delay
+        setTimeout(() => {
+            descriptionBar.textContent = descriptionText;
+            descriptionBar.style.opacity = '1';  // Show description with transparency
+        }, 300); // Delay to allow image to fade in
+    }, 100); // Delay for image loading
 }
 
-// Function to start automatic cycling through items
-function startAutoCycle() {
-    clearInterval(autoCycle); // Clear any existing intervals to avoid overlap
-    autoCycle = setInterval(() => {
-        currentIndex = (currentIndex + 1) % serviceItems.length;
-        updateContent(serviceItems[currentIndex]);
-    }, 8000); // Adjust the time as needed
-}
-
-// Mouse hover event listeners for manual control
-serviceItems.forEach((item, index) => {
-    item.addEventListener('mouseover', () => {
-        clearInterval(autoCycle); // Pause auto-cycling on hover
-        updateContent(item);
-    });
-
-    item.addEventListener('mouseout', () => {
-        currentIndex = index; // Update currentIndex to resume correctly
-        startAutoCycle(); // Resume auto-cycling on mouse out
-    });
+// Click event listeners for manual control
+serviceItems.forEach(item => {
+    item.addEventListener('click', () => updateContent(item));
 });
-
-// Initial call to start the automatic cycling
-startAutoCycle();
