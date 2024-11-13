@@ -198,11 +198,14 @@
 /* Main container for service list and image display */
 .service-list-container {
     display: flex;
+    flex-direction: row; /* Ensure horizontal layout */
     justify-content: center;
     align-items: flex-start;
     gap: 20px;
     padding: 20px;
     width: 100%;
+    max-width: 1200px; /* Optional: Set a max-width to control overall layout */
+    margin: auto; /* Center the container */
 }
 
 /* Display area for initial image and welcome text */
@@ -231,7 +234,8 @@
 .service-list {
     list-style-type: none;
     padding: 0;
-    width: 30%; /* Adjust width to control list size */
+    width: 30%; /* Adjust to control the space taken by the list */
+    max-width: 300px; /* Optional: Limit width for consistency */
 }
 
 .service-list li {
@@ -270,11 +274,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 60%; /* Adjust width as needed */
+    width: 60%; /* Adjust width to control image area space */
     text-align: center;
 }
 
-.initial-image {
+.initial-image, .service-image {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
@@ -322,18 +326,15 @@
 }
 
 /* Adjust image and description behavior */
+/* Hide the initial image when a service is selected */
 .service-image-container {
-    position: relative;
-    width: 100%;
-    height: auto;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+    display: none;
 }
 
+/* Show service-specific image when active */
 .service-image-container.show {
-    opacity: 1;
+    display: block;
 }
-
 /* Fade-in effect */
 #displayImage {
     opacity: 0;
