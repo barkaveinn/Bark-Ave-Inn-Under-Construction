@@ -282,6 +282,15 @@
     opacity: 1;
 }
 
+/* Fade-in effect */
+#displayImage {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#displayImage.fade-in {
+    opacity: 1;
+}
 
 
 
