@@ -166,7 +166,7 @@
 
         // Default initial image and text
         const defaultImage = "images/pexels-olly-3771110.jpg";
-        const defaultText = "Welcome to The Bark Avenue Inn. Please click each of the service offerings for more details.";
+        const defaultText = "Welcome! Please click each of the service offerings for more details.";
 
         // Function to reset to default
         function resetToDefault() {
@@ -186,7 +186,7 @@
         });
 
         // Reset to default after 4 seconds if no selection
-        let timeout = setTimeout(resetToDefault, 4000);
+        let timeout = setTimeout(resetToDefault, 8000);
 
         // Clear timeout on click, then restart after inactivity
         document.addEventListener("click", () => {
@@ -240,15 +240,7 @@
 
 <!-- Services Section -->
 <div class="service-container">
-    <!-- Display area for the initial image and welcome text -->
-    <div class="image-display">
-        <img id="serviceImage" src="images/pexels-olly-3771110.jpg" alt="Welcome Image" class="initial-image">
-        <div id="serviceText" class="welcome-text">
-            Welcome to The Bark Avenue Inn. Please click each of the service offerings for more details.
-        </div>
-    </div>
-
-    <!-- Service list section, aligned next to the image display -->
+    <!-- Service list section, aligned to the left of the image display -->
     <div class="service-list-container">
         <ul class="service-list">
             <li data-image="images/pexels-barnabas-davoti-31615494-12503322.jpg" data-description="A premium overnight stay in a cage-free environment.">Premium Overnight Stay</li>
@@ -257,7 +249,16 @@
             <li data-image="images/pexels-walking.jpg" data-description="Professional dog walking services.">Dog Walking</li>
         </ul>
     </div>
+
+    <!-- Display area for the initial image and welcome text -->
+    <div class="image-and-description">
+        <img id="serviceImage" src="images/pexels-olly-3771110.jpg" alt="Welcome Image" class="initial-image">
+        <div id="serviceText" class="welcome-text">
+            Welcome! Please click each of the service offerings for more details.
+        </div>
+    </div>
 </div>
+
 
 <!-- Footer Section -->
 <footer class="footer">
