@@ -19,8 +19,8 @@ const services = {
         description: "Doggie Daycare: Fun and safe daycare environment where your dog can play and socialize."
     },
     pickup: {
-        image: "images/pickup.jpg",
-        description: "Pickup/Drop-off: Convenient pickup and drop-off services to make your life easier."
+        image: "images/pexels-pickupdropoff.jpg",
+        description: "Pickup/Drop-off: Safe and convenient transportation for your pet's comfort and your peace of mind."
     },
     wedding: {
         image: "images/wedding.jpg",
