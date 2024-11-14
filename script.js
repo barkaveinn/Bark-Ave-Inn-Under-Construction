@@ -59,8 +59,8 @@ function updateContent(item) {
     // Reset the default image timer if a service is clicked
     clearTimeout(resetTimer);
 
-    // Reset the default image after 4 seconds of inactivity
-    resetTimer = setTimeout(resetToDefault, 8000);
+    // Reset the default image after 10 seconds of inactivity
+    resetTimer = setTimeout(resetToDefault, 10000);
 }
 
 // Function to reset back to default image and text
