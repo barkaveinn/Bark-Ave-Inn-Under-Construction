@@ -1,8 +1,17 @@
 /* Hero Section */
 .hero {
+    background: linear-gradient(120deg, #A98F77, #2C5F2D);
+    background-size: 200% 200%;
+    animation: gradientShift 8s ease infinite;
     position: relative;
     text-align: center;
     color: #fff;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .hero-image {
@@ -10,6 +19,20 @@
     height: 40vh; /* Default height */
     max-height: 500px; /* Limit height on large screens */
     object-fit: cover;
+}
+
+.tagline {
+    font-size: 1.5em;
+    font-style: italic;
+    color: #d1b89d;
+    margin-top: 10px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .hero-overlay {
