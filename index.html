@@ -185,13 +185,13 @@
             });
         });
 
-        // Reset to default after 4 seconds if no selection
-        let timeout = setTimeout(resetToDefault, 8000);
+        // Reset to default after 10 seconds if no selection
+        let timeout = setTimeout(resetToDefault, 10000);
 
         // Clear timeout on click, then restart after inactivity
         document.addEventListener("click", () => {
             clearTimeout(timeout);
-            timeout = setTimeout(resetToDefault, 8000);
+            timeout = setTimeout(resetToDefault, 10000);
         });
     });
 </script>    
