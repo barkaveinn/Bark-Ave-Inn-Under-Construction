@@ -542,3 +542,11 @@
         width: 90%; /* Full width within container */
     }
 }
+
+@media (max-width: 600px) {
+    .button.dashboard {
+        font-size: 0.9em;        /* Match font size to the other button */
+        padding: 10px 15px;      /* Match padding to the other button */
+        width: auto;             /* Ensure width is auto on mobile */
+    }
+}
