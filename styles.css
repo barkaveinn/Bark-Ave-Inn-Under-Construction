@@ -1,17 +1,8 @@
 /* Hero Section */
 .hero {
-    background: linear-gradient(120deg, #A98F77, #2C5F2D);
-    background-size: 200% 200%;
-    animation: gradientShift 8s ease infinite;
     position: relative;
     text-align: center;
     color: #fff;
-}
-
-@keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
 }
 
 .hero-image {
