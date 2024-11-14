@@ -359,6 +359,7 @@
     /* Adjust hero section for mobile */
     .hero {
         height: 60vh; /* Reduce height to fit mobile screens */
+        max-height: none;
     }
 
     .hero-image {
