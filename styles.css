@@ -372,7 +372,7 @@
 @media (max-width: 768px) {
     /* Adjust hero section for mobile */
     .hero {
-        height: 60vh; /* Reduce height to fit mobile screens */
+        height: 30vh; /* Reduce height to fit mobile screens */
         max-height: none;
     }
 
@@ -387,7 +387,7 @@
     }
 
     h1 {
-        font-size: 1.8em; /* Reduce font size for smaller screens */
+        font-size: 1.5em; /* Reduce font size for smaller screens */
     }
 
     p {
@@ -428,6 +428,10 @@
 
 /* Extra small screens or portrait phones */
 @media (max-width: 480px) {
+    .hero {
+        height: 35vh; /* Further reduce hero height on very small screens */
+    }
+    
     h1 {
         font-size: 1.5em;
     }
