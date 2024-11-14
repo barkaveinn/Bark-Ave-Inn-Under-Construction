@@ -550,3 +550,21 @@
         width: auto;             /* Ensure width is auto on mobile */
     }
 }
+
+/* Specific Styles for Large Screens (e.g., 2560px and up) */
+@media (min-width: 1920px) {
+    .hero-image {
+        height: 60vh; /* Increase height to cover more space on larger screens */
+        max-height: 1000px; /* Cap the height */
+        object-position: center top; /* Adjust as needed to highlight the focal point */
+    }
+}
+
+/* Ultra-Wide Screens (2560px and up) */
+@media (min-width: 2560px) {
+    .hero-image {
+        height: 70vh; /* Increase further for larger screens */
+        max-height: 1200px; /* Further height control */
+        object-position: center; /* Center the main focal point */
+    }
+}
