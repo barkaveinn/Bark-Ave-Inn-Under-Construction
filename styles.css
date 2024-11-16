@@ -4,6 +4,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Playfair Display', serif;
+            background-color: #F4F4F4;
+            color: #2C5F2D;
+        }
 
 /* Navbar */
 .navbar {
@@ -73,14 +80,6 @@
 <!-- <style> -->
         /* Font Styles */
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400&display=swap');
-
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Playfair Display', serif;
-            background-color: #F4F4F4;
-            color: #2C5F2D;
-        }
 
         /* Hero Section */
         .hero {
