@@ -97,3 +97,30 @@ hamburger.addEventListener("click", () => {
 html {
   scroll-behavior: smooth;
 }
+
+
+const modal = document.getElementById("pricingModal");
+  const closeModal = document.getElementById("closeModal");
+  const openModal = document.getElementById("openModal");
+
+  // Open Modal
+  openModal.addEventListener("click", () => {
+    modal.style.display = "block";
+    modal.setAttribute("aria-hidden", "false");
+  });
+
+  // Close Modal (Button Click)
+  closeModal.addEventListener("click", () => {
+    modal.style.display = "none";
+    modal.setAttribute("aria-hidden", "true");
+  });
+
+  // Close Modal (Esc Key)
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      if (modal.style.display === "block") {
+        modal.style.display = "none";
+        modal.setAttribute("aria-hidden", "true");
+      }
+    }
+  });
