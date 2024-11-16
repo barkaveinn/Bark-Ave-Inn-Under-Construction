@@ -1,54 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>The Bark Avenue Inn - Premium Dog Boarding and Daycare| Launching in 2025</title>
+    <link rel="stylesheet" href="styles.css">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Bark Avenue Inn</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="The Bark Avenue Inn offers luxury dog boarding and daycare services. Safe, comfortable, and fun for your furry friends. Book now for January 2025! Follow us on our socials for updates!">
+
+    <style>
+        /* Font Styles */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Playfair Display', serif;
+            background-color: #F4F4F4;
+            color: #2C5F2D;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-image: url('images/pexels-ron-lach-10117507.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .hero-overlay {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #d1b89d
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1em;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            background-color: #584229;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+        }
+
+        .cta-button:hover {
+            background-color: #7a5b39;
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .service-container {
+            padding: 50px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .service-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+
+        .service-list li {
+            cursor: pointer;
+            margin: 10px 0;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        .service-list li:hover {
+            color: #d1b89d;
+        }
+
+        .image-display {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        #displayImage {
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .description-bar {
+            margin-top: 20px;
+            font-size: 1.1em;
+            color: #707070;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .footer {
+            padding: 40px 20px;
+            background-color: #707070;
+            color: white;
+            text-align: center;
+        }
+
+        .footer-content p {
+            margin-bottom: 10px;
+        }
+
+        .social-icons img {
+            width: 40px;
+            height: 40px;
+            margin: 0 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .cta-button {
+                font-size: 1em;
+                padding: 8px 16px;
+            }
+
+            .service-list li {
+                font-size: 1.1em;
+            }
+
+            #displayImage {
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const serviceListItems = document.querySelectorAll(".service-list li");
+        const serviceImage = document.getElementById("serviceImage");
+        const serviceText = document.getElementById("serviceText");
+
+        // Default initial image and text
+        const defaultImage = "images/pexels-olly-3771110.jpg";
+        const defaultText = "Welcome! Please click each of the service offerings for more details.";
+
+        // Function to reset to default
+        function resetToDefault() {
+            serviceImage.src = defaultImage;
+            serviceText.textContent = defaultText;
+        }
+
+        // Add event listeners to each service item
+        serviceListItems.forEach(item => {
+            item.addEventListener("click", function () {
+                const imageSrc = this.getAttribute("data-image");
+                const description = this.getAttribute("data-description");
+
+                serviceImage.src = imageSrc;
+                serviceText.textContent = description;
+            });
+        });
+
+        // Reset to default after 10 seconds if no selection
+        let timeout = setTimeout(resetToDefault, 10000);
+
+        // Clear timeout on click, then restart after inactivity
+        document.addEventListener("click", () => {
+            clearTimeout(timeout);
+            timeout = setTimeout(resetToDefault, 10000);
+        });
+    });
+</script>    
+    <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation Bar</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Hero Section -->
-    <section class="hero">
-        <img src="images/pexels-ron-lach-10117507.jpg" alt="Happy dog relaxing outdoors" class="hero-image">
-        <div class="hero-overlay">
-            <h1>Welcome to The Bark Avenue Inn</h1>
-            <p>Your dog's home away from home</p>
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html">The Bark Avenue Inn, LLC</a>
+    </div>
+    <nav class="nav-links">
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#service-container">Services</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="about.html">Learn More</a></li>
+      </ul>
+    </nav>
+  </header>
+</body>
+</html>
+
+
+
+
+
+        
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-overlay">
+        <h1>The Bark Avenue Inn</h1>
+        <h1>Coming January 2025</h1>
+        <div class="tagline">
+            <p>A Boutique Stay for Your Best FUR'iend</p>
         </div>
-    </section>
+            <a href="javascript:void(0);" class="cta-button" id="viewPricingButton">2025 Rates</a>
+        <div class="button-container">
+            <a href="https://doggiedashboard.com/users/0aa6aad897/new_client" target="_blank"><img width="200" src="https://d3pzb2kzibri67.cloudfront.net/assets/client-form-button.png"></a>
+        </div>
+    </div>
+</section>
 
-    <!-- Header -->
-    <header>
-        <div class="hamburger">☰</div>
-        <nav class="nav-links">
-            <ul>
-                <li><a href="#boarding">Boarding</a></li>
-                <li><a href="#daycare">Daycare</a></li>
-                <li><a href="#pickup">Pickup/Drop-off</a></li>
-                <li><a href="#wedding">Wedding Concierge</a></li>
-                <li><a href="#training">Training</a></li>
-            </ul>
-        </nav>
-    </header>
+<!-- Modal Structure -->
+<div id="pricingModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button" id="closeModal">&times;</span>
+        <img src="images/Bark-Avenue-Inn-4.png" alt="The BArk Avenue Inn 2025 Pricing Table" class="pricing-image">
+    </div>
+</div>
 
-    <!-- Main Content -->
-    <main>
-        <div class="service-section">
-            <ul class="service-list">
-                <li data-service="boarding">Boarding</li>
-                <li data-service="daycare">Daycare</li>
-                <li data-service="pickup">Pickup/Drop-off</li>
-                <li data-service="wedding">Wedding Concierge</li>
-                <li data-service="training">Training</li>
-            </ul>
-            <div class="service-display">
-                <div class="service-image-container">
-                    <img id="displayImage" src="images/pexels-olly-3771110.jpg" alt="Default Image">
-                </div>
-                <div id="descriptionBar" class="description-bar">Welcome to The Bark Avenue Inn. Please click each of the service offerings for more details.</div>
+<script>
+    var modal = document.getElementById("pricingModal");
+    var btn = document.getElementById("viewPricingButton");
+    var span = document.getElementById("closeModal");
+
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+<!-- Services Section -->
+<div id="service-container" class="service-container">
+    <!-- Service list section, aligned to the left of the image display -->
+    <h1>The Bark Avenue Inn Guest Services & Experiences</h1>
+    <div class="service-list-container">
+        <ul class="service-list">
+            <li data-image="images/pexels-barnabas-davoti-31615494-12503322.jpg" data-description="A premium overnight stay, unlike traditional boarding facilities with our truly cage-free environment fosters exploration, socialization, and relaxation. Our overnight guests, enjoy communal or pack-like sleeping arrangements in large open areas, creating a more natural, stress-reducing environment for well-socialized dogs.">Premium Overnight Stay</li>
+            <li data-image="images/pexels-daycare.jpg" data-description="A fun, safe, and engaging environment where your dog can socialize, play, and relax. Plenty of TLC to keep your pup happy and entertained all day.">Doggie Daycare</li>
+            <li data-image="images/pexels-karolina-grabowska-5705624.jpg" data-description="Build a stronger bond with your dog through positive, highly experienced-led training. Tailored sessions address basic obedience and behavioral challenges for a well-behaved, happy companion.">Experienced Dog Training</li>
+            <li data-image="images/pexels-weddingdog.jpg" data-description="Make your special day truly unforgettable with our Premium Wedding Dog Concierge Service. From elegant pickup to a perfectly timed walk down the aisle, we ensure your furry family member joins your celebration in style.">Wedding-Dog Concierge Service</li>
+            <li data-image="images/pexels-monica-3987557.jpg" data-description="Reliable, personalized check-ins for your pet, providing feeding, walking, playtime, and companionship. Perfect for pets who prefer their home environment while you're at work or away.">In-Home Drop-in Visit</li>
+            <li data-image="images/pexels-pickupdropoff.jpg" data-description="Safe and convenient transportation for your pet's comfort and your peace of mind.">Pickup and Drop-Off Service</li>
+            <li data-image="images/pexels-walking.jpg" data-description="Enjoy peace of mind knowing your dog is getting the exercise and stimulation they need with our reliable dog walking service. Each walk is tailored to your dog’s pace and preferences, giving them a healthy outing they’ll look forward to every time.">Dog Walking</li>
+            <li data-image="images/pexels-arina-krasnikova-7725622.jpg" data-description="Professional, loving care for your cat right in the comfort of home. From feeding and playtime to litter box maintenance, we ensure your cat feels safe and happy while you're away.">In-Home Premium Cat Care</li>
+            
+        </ul>
+   
+
+        <!-- Display area for the initial image and welcome text -->
+        <div class="image-and-description">
+            <img id="serviceImage" src="images/pexels-olly-3771110.jpg" alt="The Bark Avenue Inn Welcome Image" class="initial-image">
+            <div id="serviceText" class="welcome-text">
+                Welcome! Please click each of the service offerings for more details.
             </div>
         </div>
-    </main>
+    </div>
+</div>
 
-    <script src="script.js"></script>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-content">
+        <p>&copy; 2024 The Bark Avenue Inn, LLC. All Rights Reserved. | Email: <a href="mailto:barkavenueinn@gmail.com">barkavenueinn@gmail.com</a> | Phone: (516) 500-1966</p>
+        <div class="social-icons">
+            <p>Follow us on Instagram for updates!</p>
+            <a href="https://www.instagram.com/bark_avenue_inn" target="_blank" style="text-decoration: none;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="The Bark Avenue Inn Premium Pet Services On Instagram">
+            </a>
+        </div>
+    </div>
+</footer>
+
 </body>
 </html>
