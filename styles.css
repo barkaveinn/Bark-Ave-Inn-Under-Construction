@@ -665,6 +665,14 @@ body {
         padding: 8px 12px; /* Smaller padding for compact buttons */
     }
 }
+  .hero-overlay {
+          padding: 5px;
+          text-align: center;
+      }
+      h1 {
+          font-size: 1.2em;
+      }
+  }
 
 /* Target screens smaller than 768px (typical mobile) */
 @media (max-width: 768px) {
