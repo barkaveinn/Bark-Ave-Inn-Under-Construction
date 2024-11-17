@@ -3,52 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>The Bark Avenue Inn</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="hero-text">
+            <h1>Welcome to The Bark Avenue Inn</h1>
+            <p>Your dog's home away from home. Click below for more information on our services.</p>
         </div>
-        <nav class="nav-links">
-            <ul>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <img src="images/pexels-olly-3771110.jpg" alt="Hero Image" class="hero-image">
     </header>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Services Section -->
-        <section id="services">
-            <div class="service-list">
-                <ul>
-                    <li data-service="boarding">Overnight Boarding</li>
-                    <li data-service="daycare">Doggie Daycare</li>
-                    <li data-service="pickup">Pickup/Drop-off</li>
-                    <li data-service="wedding">Wedding Concierge</li>
-                    <li data-service="training">Training</li>
-                </ul>
-            </div>
-            <div class="service-image-container">
-                <img id="displayImage" src="" alt="Service Display">
-                <div id="descriptionBar"></div>
-            </div>
-        </section>
-    </main>
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service-list">
+            <ul>
+                <li data-service="boarding">Overnight Boarding</li>
+                <li data-service="daycare">Doggie Daycare</li>
+                <li data-service="pickup">Pickup/Drop-off</li>
+                <li data-service="wedding">Wedding Concierge</li>
+                <li data-service="training">Training</li>
+            </ul>
+        </div>
+        <div class="service-image-container">
+            <img id="displayImage" src="images/pexels-olly-3771110.jpg" alt="Service Image" class="service-image">
+            <div id="descriptionBar" class="service-description"></div>
+        </div>
+    </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 The Bark Avenue Inn. All rights reserved.</p>
-    </footer>
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial">
+            <p>"The Bark Avenue Inn has been a lifesaver for our dog! We trust them completely, and our dog loves staying there."</p>
+            <span>- Sarah M.</span>
+        </div>
+        <div class="testimonial">
+            <p>"Wonderful service, attentive staff, and a very clean facility. Our dog always has a great time."</p>
+            <span>- James R.</span>
+        </div>
+    </section>
 
-    <!-- JavaScript -->
-    <script src="script.js"></script>
+    <!-- Navigation & Hamburger Menu -->
+    <nav>
+        <div class="hamburger">☰</div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
