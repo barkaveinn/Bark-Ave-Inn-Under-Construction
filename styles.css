@@ -47,6 +47,34 @@
   color: #000; /* Darker text on hover */
 }
 
+/* Basic styling for accordion */
+.accordion-item {
+    margin-bottom: 10px;
+}
+
+.accordion-toggle {
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+.accordion-toggle:hover {
+    background-color: #ddd;
+}
+
+.accordion-content {
+    padding: 0 15px;
+    display: none; /* Initially hidden */
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+
 /* Make it more compact on smaller screens */
 @media (max-width: 768px) {
   .nav-links ul {
