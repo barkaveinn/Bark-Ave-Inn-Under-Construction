@@ -1,64 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>The Bark Avenue Inn</title>
+    <meta name="description" content="The Bark Avenue Inn offers luxury dog boarding and daycare services. Safe, comfortable, and fun for your furry friends. Book now for January 2025! Follow us on our socials for updates!">
+    <title>The Bark Avenue Inn - Premium Dog Boarding and Daycare | Launching in 2025</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <!-- Hero Section -->
-    <header class="hero-section">
-        <div class="hero-text">
-            <h1>Welcome to The Bark Avenue Inn</h1>
-            <p>Your dog's home away from home. Click below for more information on our services.</p>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html">The Bark Avenue Inn, LLC</a>
         </div>
-        <img src="images/pexels-olly-3771110.jpg" alt="Hero Image" class="hero-image">
+        <nav class="nav-links">
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#service-container">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="about.html">Learn More</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Services Section -->
-    <section id="services">
-        <h2>Our Services</h2>
-        <div class="service-list">
-            <ul>
-                <li data-service="boarding">Overnight Boarding</li>
-                <li data-service="daycare">Doggie Daycare</li>
-                <li data-service="pickup">Pickup/Drop-off</li>
-                <li data-service="wedding">Wedding Concierge</li>
-                <li data-service="training">Training</li>
-            </ul>
-        </div>
-        <div class="service-image-container">
-            <img id="displayImage" src="images/pexels-olly-3771110.jpg" alt="Service Image" class="service-image">
-            <div id="descriptionBar" class="service-description"></div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay">
+            <h1>The Bark Avenue Inn</h1>
+            <h1>Coming January 2025</h1>
+            <div class="tagline">
+                <p>A Boutique Stay for Your Best FUR'iend</p>
+            </div>
+            <a href="javascript:void(0);" class="cta-button" id="viewPricingButton">2025 Rates</a>
+            <div class="button-container">
+                <a href="https://doggiedashboard.com/users/0aa6aad897/new_client" target="_blank">
+                    <img width="200" src="https://d3pzb2kzibri67.cloudfront.net/assets/client-form-button.png" alt="Client Form Button">
+                </a>
+            </div>
         </div>
     </section>
+
+    <!-- Modal Structure for Pricing -->
+    <div id="pricingModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="closeModal">&times;</span>
+            <img src="images/1.png" alt="The Bark Avenue Inn 2025 Pricing Table" class="pricing-image">
+        </div>
+    </div>
+
+    <script>
+        var modal = document.getElementById("pricingModal");
+        var btn = document.getElementById("viewPricingButton");
+        var span = document.getElementById("closeModal");
+
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+    <!-- Services Section -->
+    <div id="service-container" class="service-container">
+        <h1>The Bark Avenue Inn Guest Services & Experiences</h1>
+        <div class="service-list-container">
+            <ul class="service-list">
+                <li data-image="images/pexels-barnabas-davoti-31615494-12503322.jpg" data-description="A premium overnight stay, unlike traditional boarding facilities. Our truly cage-free environment fosters exploration, socialization, and relaxation. Guests enjoy communal or pack-like sleeping arrangements in large open areas, creating a natural, stress-reducing environment for well-socialized dogs.">Premium Overnight Stay</li>
+                <li data-image="images/pexels-daycare.jpg" data-description="A fun, safe, and engaging environment where your dog can socialize, play, and relax. Plenty of TLC to keep your pup happy and entertained all day.">Doggie Daycare</li>
+                <li data-image="images/pexels-karolina-grabowska-5705624.jpg" data-description="Build a stronger bond with your dog through positive, highly experienced-led training. Tailored sessions address basic obedience and behavioral challenges for a well-behaved, happy companion.">Experienced Dog Training</li>
+                <li data-image="images/pexels-weddingdog.jpg" data-description="Make your special day truly unforgettable with our Premium Wedding Dog Concierge Service. From elegant pickup to a perfectly timed walk down the aisle, we ensure your furry family member joins your celebration in style.">Wedding-Dog Concierge Service</li>
+                <li data-image="images/pexels-monica-3987557.jpg" data-description="Reliable, personalized check-ins for your pet, providing feeding, walking, playtime, and companionship. Perfect for pets who prefer their home environment while you're at work or away.">In-Home Drop-in Visit</li>
+                <li data-image="images/pexels-pickupdropoff.jpg" data-description="Safe and convenient transportation for your pet's comfort and your peace of mind.">Pickup and Drop-Off Service</li>
+                <li data-image="images/pexels-walking.jpg" data-description="Enjoy peace of mind knowing your dog is getting the exercise and stimulation they need with our reliable dog walking service. Each walk is tailored to your dog’s pace and preferences, giving them a healthy outing they’ll look forward to every time.">Dog Walking</li>
+                <li data-image="images/pexels-arina-krasnikova-7725622.jpg" data-description="Professional, loving care for your cat right in the comfort of home. From feeding and playtime to litter box maintenance, we ensure your cat feels safe and happy while you're away.">In-Home Premium Cat Care</li>
+            </ul>
+
+            <div class="image-and-description">
+                <img id="serviceImage" src="images/pexels-olly-3771110.jpg" alt="The Bark Avenue Inn Welcome Image" class="initial-image">
+                <div id="serviceText" class="welcome-text">
+                    Welcome! Please click each of the service offerings for more details.
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Testimonials Section -->
-    <section id="testimonials">
-        <h2>What Our Clients Say</h2>
-        <div class="testimonial">
-            <p>"The Bark Avenue Inn has been a lifesaver for our dog! We trust them completely, and our dog loves staying there."</p>
-            <span>- Sarah M.</span>
+    <section id="testimonials" class="testimonials">
+        <h3>What Our Clients Say</h3>
+        <div class="testimonial-item">
+            <p>“Our pup is fully at home at the Inn.”</p>
+            <span>- Amy P.</span>
         </div>
-        <div class="testimonial">
-            <p>"Wonderful service, attentive staff, and a very clean facility. Our dog always has a great time."</p>
-            <span>- James R.</span>
+        <div class="testimonial-item">
+            <p>“This was our first time at the Inn and treated my dog like their own.”</p>
+            <span>- Jennifer L.</span>
+        </div>
+        <div class="testimonial-item">
+            <p>“I see first hand the love and attention given to each of these dogs that stay here.”</p>
+            <span>- Sharon K.</span>
+        </div>
+        <div class="testimonial-item">
+            <p>“It was a blessing to travel and know that our pup was loved and cared for while we were away.”</p>
+            <span>- Stacy P.</span>
         </div>
     </section>
 
-    <!-- Navigation & Hamburger Menu -->
-    <nav>
-        <div class="hamburger">☰</div>
-        <div class="nav-links">
-            <ul>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-            </ul>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 The Bark Avenue Inn, LLC. All Rights Reserved. | Email: <a href="mailto:barkavenueinn@gmail.com">barkavenueinn@gmail.com</a> | Phone: (516) 500-1966</p>
+            <div class="social-icons">
+                <p>Click to follow us on Instagram and Facebook for the latest updates!</p>
+                <a href="https://www.instagram.com/bark_avenue_inn" target="_blank" style="text-decoration: none;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Icon">
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100057573814293" target="_blank" style="text-decoration: none;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Icon" style="width: 40px; height: 40px; margin-left: 10px;">
+                </a>
+            </div>
         </div>
-    </nav>
+    </footer>
 
-    <script src="scripts.js"></script>
 </body>
+
 </html>
