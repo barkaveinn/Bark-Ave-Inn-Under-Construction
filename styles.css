@@ -126,7 +126,7 @@
 
 /* Muted Background Image for Popup */
 .popup-content {
-    background-image: url('about-background.jpg'); /* Replace with your image path */
+    background-image: url('images/pexels-ron-lach-10117507.jpg'); /* Replace with your image path */
     background-size: cover;
     background-position: center;
     backdrop-filter: blur(5px);
