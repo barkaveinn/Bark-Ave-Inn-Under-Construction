@@ -105,3 +105,29 @@ document.querySelectorAll('.accordion-toggle').forEach(button => {
         content.style.display = content.style.display === 'block' ? 'none' : 'block';
     });
 });
+
+
+// JavaScript to handle the "About Us" popup
+document.addEventListener('DOMContentLoaded', () => {
+    const aboutNav = document.getElementById('aboutNav');
+    const aboutUsPopup = document.getElementById('aboutUsPopup');
+    const closePopup = document.getElementById('closePopup');
+
+    // Show popup when "About Us" link is clicked
+    aboutNav.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent navigation
+        aboutUsPopup.style.display = 'block';
+    });
+
+    // Close popup when close button is clicked
+    closePopup.addEventListener('click', () => {
+        aboutUsPopup.style.display = 'none';
+    });
+
+    // Close popup when clicking outside the popup content
+    window.addEventListener('click', (event) => {
+        if (event.target === aboutUsPopup) {
+            aboutUsPopup.style.display = 'none';
+        }
+    });
+});
