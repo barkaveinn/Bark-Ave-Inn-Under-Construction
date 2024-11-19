@@ -107,9 +107,11 @@
     margin: 20px auto; /* Adds space above and below, centers horizontally */
     max-width: 50%; /* Reduces the image width to 50% of its original size */
     height: auto; /* Maintains aspect ratio */
-    border-radius: 8px; /* Optional: Adds rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow */
+    border-radius: 8px; /* Adds rounded corners */
+    border: 2px solid white; /* Thin white border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
 }
+
 
 
 /* Basic styling for accordion */
