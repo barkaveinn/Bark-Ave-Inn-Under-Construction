@@ -103,14 +103,16 @@
 }
 
 .about-end-image {
-    display: block; /* Ensures it's treated as a block element for centering */
-    margin: 20px auto; /* Adds space above and below, centers horizontally */
-    max-width: 50%; /* Reduces the image width to 50% of its original size */
-    height: auto; /* Maintains aspect ratio */
-    border-radius: 8px; /* Adds rounded corners */
-    border: 2px solid white; /* Thin white border */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    display: block;
+    margin: 20px auto;
+    max-width: 50%;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 
+                0 0 10px rgba(255, 255, 255, 0.5); /* Subtle glow */
 }
+
 
 
 
