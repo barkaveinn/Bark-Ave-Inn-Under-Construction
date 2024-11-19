@@ -85,10 +85,23 @@ function initialize() {
 // Initialize when the page loads
 initialize();
 
-// Hamburger Menu
+
+
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links ul");
 
 hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("active");
+});
+
+html {
+  scroll-behavior: smooth;
+}
+
+// JavaScript to toggle accordion sections
+document.querySelectorAll('.accordion-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    });
 });
