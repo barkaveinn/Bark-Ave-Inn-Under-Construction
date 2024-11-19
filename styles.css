@@ -19,6 +19,7 @@
   z-index: 1000; /* Keeps it above other content */
 }
 
+/* Logo */
 .navbar .logo a {
   font-size: 20px;
   font-weight: bold;
@@ -26,12 +27,22 @@
   color: #333; /* Neutral color */
 }
 
+/* Navigation Links Container */
+.nav-links {
+  display: flex;
+  flex-direction: row; /* Default for desktop */
+}
+
 .nav-links ul {
   list-style: none;
   display: flex;
+  flex-direction: row; /* Horizontal links for desktop */
   gap: 20px; /* Space between links */
+  margin: 0; /* Reset margin */
+  padding: 0; /* Reset padding */
 }
 
+/* Individual Links */
 .nav-links li a {
   text-decoration: none;
   color: #555; /* Neutral link color */
@@ -48,11 +59,42 @@
 }
 
 .nav-links a.active {
-    color: #ffffff;
-    background-color: #444;
-    padding: 5px 10px;
-    border-radius: 5px;
+  color: #ffffff;
+  background-color: #444;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
+
+/* Mobile Specific Styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap; /* Allow items to stack */
+    padding: 10px 15px; /* Adjust padding for smaller screens */
+  }
+
+  .nav-links {
+    width: 100%; /* Take full width on mobile */
+    flex-direction: column; /* Stack links vertically */
+    align-items: flex-start; /* Align links to the left */
+  }
+
+  .nav-links ul {
+    flex-direction: column; /* Stack links */
+    gap: 10px; /* Reduce gap between links */
+  }
+
+  .nav-links li a {
+    font-size: 18px; /* Slightly larger font for readability */
+    width: 100%; /* Ensure clickable area spans full width */
+    text-align: left; /* Align text to the left */
+    padding: 12px 15px; /* Adjust padding for easier tapping */
+  }
+
+  .nav-links li a:hover {
+    background-color: #ddd; /* Slightly darker hover effect on mobile */
+  }
+}
+
 
 /* About Us Section Styling */
 .about-us {
