@@ -47,6 +47,13 @@
   color: #000; /* Darker text on hover */
 }
 
+.nav-links a.active {
+    color: #ffffff;
+    background-color: #444;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
 /* Basic styling for accordion */
 .accordion-item {
     margin-bottom: 10px;
