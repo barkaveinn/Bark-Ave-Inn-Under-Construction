@@ -105,13 +105,28 @@
     min-height: 100vh;
     padding: 20px;
     text-align: justify;
-    background-image: url('images/IMG_7462.jpeg'); /* Path to your image */
+    background-image: url('images/IMG_7462-600w.jpeg'); /* Default background image */
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Creates a parallax effect */
     color: #ffffff; /* White text for contrast */
     z-index: 1;
 }
+
+/* For medium screens, adjust to a larger background */
+@media (min-width: 768px) {
+    .about-us {
+        background-image: url('images/IMG_7462-1200w.jpeg');
+    }
+}
+
+/* For large screens, set the largest background */
+@media (min-width: 1200px) {
+    .about-us {
+        background-image: url('images/IMG_7462-1600w.jpeg');
+    }
+}
+
 
 /* Add an overlay to mute the background */
 .about-us::before {
