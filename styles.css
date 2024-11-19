@@ -261,7 +261,7 @@
     min-height: 100vh;
     padding: 20px;
     text-align: justify;
-    background-image: url('images/IMG_7462.jpeg'); /* Path to your image */
+    background-image: url('https://via.placeholder.com/1920x1080'); /* Path to your image */
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Creates a parallax effect */
