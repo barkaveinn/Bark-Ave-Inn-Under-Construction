@@ -87,11 +87,14 @@ initialize();
 
 
 
-const hamburger = document.querySelector('.hamburger');
+document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.querySelector("#hamburger-menu");
 const navLinks = document.querySelector('.nav-links');
 
 hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('open');
+    hamburger.classList.toggle("active"); // For possible animation
+    });
 });
 
 html {
