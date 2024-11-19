@@ -101,6 +101,14 @@ html {
   scroll-behavior: smooth;
 }
 
+hamburger.setAttribute("aria-expanded", "false");
+
+hamburger.addEventListener("click", () => {
+    const isExpanded = hamburger.getAttribute("aria-expanded") === "true" || false;
+    hamburger.setAttribute("aria-expanded", !isExpanded);
+});
+
+
 // JavaScript to toggle accordion sections
 document.querySelectorAll('.accordion-toggle').forEach(button => {
     button.addEventListener('click', () => {
