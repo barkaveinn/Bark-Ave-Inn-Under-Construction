@@ -190,9 +190,84 @@
     display: flex; /* Show when active */
   }
 
-  .hamburger {
-    display: block; /* Show hamburger icon */
+  /* Hamburger Icon */
+.hamburger {
+  display: none; /* Hide by default */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.hamburger-icon {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 3px;
+  position: relative;
+}
+
+.hamburger-icon::before,
+.hamburger-icon::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 3px;
+  left: 0;
+}
+
+.hamburger-icon::before {
+  top: -7px;
+}
+
+.hamburger-icon::after {
+  top: 7px;
+}
+
+/* Hide the nav links by default on mobile */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  padding: 5px 10px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  /* Hide the nav links and only show the hamburger menu */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #333;
+    width: 100%;
+    padding: 10px 0;
   }
+
+  /* When the hamburger is clicked, show the nav links */
+  .nav-links.open {
+    display: flex;
+  }
+
+  /* Show the hamburger button on mobile */
+  .hamburger {
+    display: block;
+  }
+}
 
 
 
