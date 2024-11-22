@@ -183,8 +183,13 @@
     padding: 0 15px;
     display: none; /* Initially hidden */
     overflow: hidden;
-    transition: max-height 0.3s ease;
+    transition: max-height 0.3s ease-out;
 }
+
+.accordion-content.open {
+    display: block;
+}
+
 
   .nav-links ul.active {
     display: flex; /* Show when active */
@@ -805,6 +810,7 @@
 /* Hide the initial image when a service is selected */
 .service-image-container {
     display: none;
+  transition: opacity 0.3s ease-in-out;
 }
 
 /* Show service-specific image when active */
