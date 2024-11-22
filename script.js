@@ -123,8 +123,9 @@ document.addEventListener("DOMContentLoaded", () => {
 }); -->
 
 hamburger.addEventListener('click', () => {
-        const isOpen = navLinks.classList.toggle('open'); // Toggle nav visibility
-        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('open'); // Toggle nav visibility
+        const isExpanded = hamburger.getAttribute("aria-expanded") === "true";
+        hamburger.classList.toggle("active");
         body.classList.toggle('nav-open', isOpen); // Prevent scrolling when open
 });
 
