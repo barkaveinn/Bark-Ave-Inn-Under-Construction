@@ -35,8 +35,7 @@ const services = {
 // Timer to reset back to default if no click occurs
 let resetTimer;
 
-// Function to update the displayed image and description with a delay
-
+// Function to preload images
 function preloadImages() {
     Object.values(services).forEach(service => {
         const img = new Image();
@@ -44,6 +43,7 @@ function preloadImages() {
     });
 }
 
+// Function to update the displayed image and description with a delay
 function updateContent(item) {
     const serviceKey = item.getAttribute('data-service');  // Get service identifier (boarding, daycare, etc.)
     const { image, description } = services[serviceKey];
@@ -52,19 +52,7 @@ function updateContent(item) {
     descriptionBar.style.opacity = '0';  // Hide description temporarily
     displayImage.classList.remove('fade-in');  // Remove fade effect from the image
 
-<!--  // Delay to display image first, then show description
-    setTimeout(() => {
-        displayImage.src = image;
-        displayImage.classList.add('fade-in');  // Add fade effect to the image
-
-        // After the image fades in, show the description with a slight delay
-        setTimeout(() => {
-            descriptionBar.textContent = description;
-            descriptionBar.style.opacity = '1';  // Show description with fade-in effect
-        }, 300); // Delay to allow image to fade in
-    }, 100); // Delay for image loading -->
-
-// Clear previous animation
+    // Clear previous animation
     displayImage.classList.remove('fade-in');
     descriptionBar.style.opacity = '0';
 
@@ -75,7 +63,7 @@ function updateContent(item) {
         descriptionBar.textContent = description;
         descriptionBar.style.opacity = '1';
     }, 300);
-    
+
     // Reset the default image timer if a service is clicked
     clearTimeout(resetTimer);
 
@@ -109,34 +97,25 @@ function initialize() {
 // Initialize when the page loads
 initialize();
 
-
-
+// Hamburger menu toggle
 document.addEventListener("DOMContentLoaded", () => {
     const hamburger = document.querySelector("#hamburger-menu");
     const navLinks = document.querySelector('.nav-links');
     const body = document.body;
 
-hamburger.addEventListener('click', () => {
+    hamburger.addEventListener('click', () => {
         navLinks.classList.toggle('open'); // Toggle nav visibility
         const isExpanded = hamburger.getAttribute("aria-expanded") === "true";
         hamburger.classList.toggle("active");
-        body.classList.toggle('nav-open', isOpen); // Prevent scrolling when open
+        body.classList.toggle('nav-open', isExpanded); // Prevent scrolling when open
+        hamburger.setAttribute("aria-expanded", !isExpanded); // Update the aria-expanded state
+    });
 });
-
-
-hamburger.setAttribute("aria-expanded", "false");
-
-hamburger.addEventListener("click", () => {
-    const isExpanded = hamburger.getAttribute("aria-expanded") === "true" || false;
-    hamburger.setAttribute("aria-expanded", !isExpanded);
-});
-
 
 // JavaScript to toggle accordion sections
 document.querySelectorAll('.accordion-toggle').forEach(button => {
     button.addEventListener('click', () => {
         const content = button.nextElementSibling;
-        <!-- content.style.display = content.style.display === 'block' ? 'none' : 'block'; -->
-        content.classList.toggle('open');
+        content.classList.toggle('open'); // Toggle accordion content visibility
     });
 });
