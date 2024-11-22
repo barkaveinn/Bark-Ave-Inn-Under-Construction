@@ -123,10 +123,7 @@ hamburger.addEventListener('click', () => {
         body.classList.toggle('nav-open', isOpen); // Prevent scrolling when open
 });
 
-    
-html {
-  scroll-behavior: smooth;
-}
+
 
 hamburger.setAttribute("aria-expanded", "false");
 
