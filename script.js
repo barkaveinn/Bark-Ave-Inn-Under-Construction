@@ -113,7 +113,8 @@ initialize();
 
 document.addEventListener("DOMContentLoaded", () => {
     const hamburger = document.querySelector("#hamburger-menu");
-const navLinks = document.querySelector('.nav-links');
+    const navLinks = document.querySelector('.nav-links');
+    const body = document.body;
 
 <!-- hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('open');
@@ -122,10 +123,9 @@ const navLinks = document.querySelector('.nav-links');
 }); -->
 
 hamburger.addEventListener('click', () => {
-    const isExpanded = hamburger.getAttribute("aria-expanded") === "true";
-    hamburger.setAttribute("aria-expanded", !isExpanded);
-    navLinks.classList.toggle('open');
-    hamburger.classList.toggle('active');
+        const isOpen = navLinks.classList.toggle('open'); // Toggle nav visibility
+        hamburger.classList.toggle('active');
+        body.classList.toggle('nav-open', isOpen); // Prevent scrolling when open
 });
 
     
