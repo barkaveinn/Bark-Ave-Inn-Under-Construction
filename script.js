@@ -116,12 +116,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const navLinks = document.querySelector('.nav-links');
     const body = document.body;
 
-<!-- hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
-    hamburger.classList.toggle("active"); // For possible animation
-    });
-}); -->
-
 hamburger.addEventListener('click', () => {
         navLinks.classList.toggle('open'); // Toggle nav visibility
         const isExpanded = hamburger.getAttribute("aria-expanded") === "true";
