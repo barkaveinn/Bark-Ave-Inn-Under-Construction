@@ -100,15 +100,15 @@ initialize();
 // Hamburger menu toggle
 document.addEventListener("DOMContentLoaded", () => {
     const hamburger = document.querySelector("#hamburger-menu");
-    const navLinks = document.querySelector('.nav-links');
+    const navLinks = document.querySelector(".nav-links");
     const body = document.body;
 
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('open'); // Toggle nav visibility
-        const isExpanded = hamburger.getAttribute("aria-expanded") === "true";
-        hamburger.classList.toggle("active");
-        body.classList.toggle('nav-open', isExpanded); // Prevent scrolling when open
-        hamburger.setAttribute("aria-expanded", !isExpanded); // Update the aria-expanded state
+    hamburger.addEventListener("click", () => {
+        const isExpanded = hamburger.classList.toggle("active"); // Toggle active state
+        navLinks.classList.toggle("open", isExpanded); // Open or close nav links
+        body.classList.toggle("nav-open", isExpanded); // Lock or unlock body scroll
+
+        hamburger.setAttribute("aria-expanded", isExpanded);
     });
 });
 
