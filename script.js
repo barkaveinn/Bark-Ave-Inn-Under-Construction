@@ -11,24 +11,24 @@ const defaultText = "Welcome to The Bark Avenue Inn. Please click each of the se
 // Service data
 const services = {
     boarding: {
-        image: "images/boarding.jpg",
-        description: "Overnight Boarding: Comfortable and secure overnight stays for your furry friend."
+        image: "images/pexels-barnabas-davoti-31615494-12503322.jpg",
+        description: "A premium overnight stay, unlike traditional boarding facilities with our truly cage-free environment fosters exploration, socialization, and relaxation. Our overnight guests, enjoy communal or pack-like sleeping arrangements in large open areas, creating a more natural, stress-reducing environment for well-socialized dogs."
     },
     daycare: {
-        image: "images/daycare.jpg",
-        description: "Doggie Daycare: Fun and safe daycare environment where your dog can play and socialize."
+        image: "images/pexels-daycare.jpg",
+        description: "A fun, safe, and engaging environment where your dog can socialize, play, and relax. Plenty of TLC to keep your pup happy and entertained all day."
     },
     pickup: {
         image: "images/pexels-pickupdropoff.jpg",
-        description: "Pickup/Drop-off: Safe and convenient transportation for your pet's comfort and your peace of mind."
+        description: "Safe and convenient transportation for your pet's comfort and your peace of mind."
     },
     wedding: {
-        image: "images/wedding.jpg",
-        description: "Wedding Concierge: Specialized service to include your dog in your big day!"
+        image: "images/pexels-weddingdog.jpg",
+        description: "Make your special day truly unforgettable with our Premium Wedding Dog Concierge Service. From elegant pickup to a perfectly timed walk down the aisle, we ensure your furry family member joins your celebration in style."
     },
     training: {
-        image: "images/training.jpg",
-        description: "Training: Professional training services to help your dog learn and grow."
+        image: "images/pexels-karolina-grabowska-5705624.jpg",
+        description: "Build a stronger bond with your dog through positive, highly experienced-led training. Tailored sessions address basic obedience and behavioral challenges for a well-behaved, happy companion."
     }
 };
 
