@@ -45,18 +45,14 @@ function preloadImages() {
 
 // Function to update the displayed image and description with a delay
 function updateContent(item) {
-    const serviceKey = item.getAttribute('data-service');  // Get service identifier (boarding, daycare, etc.)
+    const serviceKey = item.getAttribute('data-service'); // Get service identifier (boarding, daycare, etc.)
     const { image, description } = services[serviceKey];
 
-    // Remove the text and show only the image briefly
-    descriptionBar.style.opacity = '0';  // Hide description temporarily
-    displayImage.classList.remove('fade-in');  // Remove fade effect from the image
-
-    // Clear previous animation
-    displayImage.classList.remove('fade-in');
+    // Temporarily hide the text and remove fade-in effect
     descriptionBar.style.opacity = '0';
+    displayImage.classList.remove('fade-in');
 
-    // Update content after delay
+    // Update content after a brief delay
     setTimeout(() => {
         displayImage.src = image;
         displayImage.classList.add('fade-in');
@@ -67,35 +63,31 @@ function updateContent(item) {
     // Reset the default image timer if a service is clicked
     clearTimeout(resetTimer);
 
-    // Reset the default image after 10 seconds of inactivity
+    // Reset to default image and text after 10 seconds of inactivity
     resetTimer = setTimeout(resetToDefault, 10000);
 }
 
 // Preload images and initialize page
 preloadImages();
-initialize();
 
 // Function to reset back to default image and text
 function resetToDefault() {
-    displayImage.src = defaultImage;  // Set the image to the default one
-    descriptionBar.textContent = defaultText;  // Set the default welcome text
-    descriptionBar.style.opacity = '1';  // Ensure the default text is visible
+    displayImage.src = defaultImage;
+    descriptionBar.textContent = defaultText;
+    descriptionBar.style.opacity = '1';
 }
 
-// Initialize the page with the default content
+// Initialize the page with default content and set event listeners
 function initialize() {
     displayImage.src = defaultImage;
     descriptionBar.textContent = defaultText;
-    descriptionBar.style.opacity = '1';  // Ensure the description text is visible initially
+    descriptionBar.style.opacity = '1';
 
-    // Set up event listeners for each service item
+    // Set up event listeners for service items
     serviceItems.forEach(item => {
         item.addEventListener('click', () => updateContent(item));
     });
 }
-
-// Initialize when the page loads
-initialize();
 
 // Hamburger menu toggle
 document.addEventListener("DOMContentLoaded", () => {
@@ -103,13 +95,22 @@ document.addEventListener("DOMContentLoaded", () => {
     const navLinks = document.querySelector(".nav-links");
     const body = document.body;
 
-    hamburger.addEventListener("click", () => {
-        const isExpanded = hamburger.classList.toggle("active"); // Toggle active state
-        navLinks.classList.toggle("open", isExpanded); // Open or close nav links
-        body.classList.toggle("nav-open", isExpanded); // Lock or unlock body scroll
+    // Initialize default content and listeners
+    initialize();
 
-        hamburger.setAttribute("aria-expanded", isExpanded);
-    });
+    // Hamburger menu functionality
+    if (hamburger) {
+        hamburger.addEventListener("click", () => {
+            const isExpanded = hamburger.classList.toggle("active");
+            navLinks.classList.toggle("open", isExpanded);
+            body.classList.toggle("nav-open", isExpanded);
+
+            // Update aria-expanded attribute
+            hamburger.setAttribute("aria-expanded", isExpanded);
+        });
+    } else {
+        console.error("#hamburger-menu element is missing in the HTML file.");
+    }
 });
 
 // JavaScript to toggle accordion sections
