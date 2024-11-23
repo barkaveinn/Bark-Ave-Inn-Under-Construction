@@ -1,11 +1,11 @@
 // Select service items and display elements
 const serviceItems = document.querySelectorAll('.service-list li');
-const displayImage = document.getElementById('displayImage');
+const displayImage = document.getElementById('displayImage'); // Declare once
 const descriptionBar = document.getElementById('descriptionBar');
 const serviceImageContainer = document.querySelector('.service-image-container');
 
 // Initial state (Default Image and Text)
-const defaultImage = "images/pexels-olly-3771110.jpg"; // Path to the default image
+const defaultImage = "images/pexels-olly-3771110.jpg";
 const defaultText = "Welcome to The Bark Avenue Inn. Please click each of the service offerings for more details.";
 
 // Service data
@@ -45,14 +45,12 @@ function preloadImages() {
 
 // Function to update the displayed image and description with a delay
 function updateContent(item) {
-    const serviceKey = item.getAttribute('data-service'); // Get service identifier (boarding, daycare, etc.)
+    const serviceKey = item.getAttribute('data-service');
     const { image, description } = services[serviceKey];
 
-    // Temporarily hide the text and remove fade-in effect
     descriptionBar.style.opacity = '0';
     displayImage.classList.remove('fade-in');
 
-    // Update content after a brief delay
     setTimeout(() => {
         displayImage.src = image;
         displayImage.classList.add('fade-in');
@@ -60,10 +58,7 @@ function updateContent(item) {
         descriptionBar.style.opacity = '1';
     }, 300);
 
-    // Reset the default image timer if a service is clicked
     clearTimeout(resetTimer);
-
-    // Reset to default image and text after 10 seconds of inactivity
     resetTimer = setTimeout(resetToDefault, 10000);
 }
 
@@ -83,7 +78,6 @@ function initialize() {
     descriptionBar.textContent = defaultText;
     descriptionBar.style.opacity = '1';
 
-    // Set up event listeners for service items
     serviceItems.forEach(item => {
         item.addEventListener('click', () => updateContent(item));
     });
@@ -95,21 +89,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const navLinks = document.querySelector(".nav-links");
     const body = document.body;
 
-    // Initialize default content and listeners
     initialize();
 
-    // Ensure hamburger functionality works
     if (hamburger) {
         hamburger.addEventListener("click", () => {
             const isExpanded = hamburger.classList.toggle("active");
             navLinks.classList.toggle("open", isExpanded);
             body.classList.toggle("nav-open", isExpanded);
 
-            // Update aria-expanded attribute
             hamburger.setAttribute("aria-expanded", isExpanded);
         });
     } else {
-        console.error("Element #hamburger-menu is missing in the HTML file. Please verify.");
+        console.error("Element #hamburger-menu is missing in the HTML file.");
     }
 });
 
@@ -117,6 +108,6 @@ document.addEventListener("DOMContentLoaded", () => {
 document.querySelectorAll('.accordion-toggle').forEach(button => {
     button.addEventListener('click', () => {
         const content = button.nextElementSibling;
-        content.classList.toggle('open'); // Toggle accordion content visibility
+        content.classList.toggle('open');
     });
 });
