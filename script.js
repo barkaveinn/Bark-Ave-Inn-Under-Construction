@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Initialize default content and listeners
     initialize();
 
-    // Hamburger menu functionality
+    // Ensure hamburger functionality works
     if (hamburger) {
         hamburger.addEventListener("click", () => {
             const isExpanded = hamburger.classList.toggle("active");
@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
             hamburger.setAttribute("aria-expanded", isExpanded);
         });
     } else {
-        console.error("#hamburger-menu element is missing in the HTML file.");
+        console.error("Element #hamburger-menu is missing in the HTML file. Please verify.");
     }
 });
 
