@@ -1,39 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hamburger Menu with Accordion</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburger Menu with Accordion</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Hamburger Menu -->
-  <button class="hamburger" aria-label="Toggle Navigation">
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-  </button>
-
-  <!-- Navigation Menu -->
-  <nav class="nav-menu">
-    <ul>
-      <li>
-        <button class="accordion">Menu 1</button>
-        <div class="panel">
-          <a href="#">Sub-item 1</a>
-          <a href="#">Sub-item 2</a>
+    <div class="hamburger">
+        ☰
+    </div>
+    <nav class="menu">
+        <div class="menu-item">
+            Menu 1
+            <div class="sub-menu">
+                <div class="sub-item">Sub-item 1A</div>
+                <div class="sub-item">Sub-item 1B</div>
+            </div>
         </div>
-      </li>
-      <li>
-        <button class="accordion">Menu 2</button>
-        <div class="panel">
-          <a href="#">Sub-item 1</a>
-          <a href="#">Sub-item 2</a>
+        <div class="menu-item">
+            Menu 2
+            <div class="sub-menu">
+                <div class="sub-item">Sub-item 2A</div>
+                <div class="sub-item">Sub-item 2B</div>
+            </div>
         </div>
-      </li>
-    </ul>
-  </nav>
-
-  <script src="script.js" defer></script>
+    </nav>
+    <script src="script.js"></script>
 </body>
 </html>
