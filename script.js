@@ -1,6 +1,6 @@
 // Select service items and display elements
 const serviceItems = document.querySelectorAll('.service-list li');
-const displayImage = document.getElementById('displayImage'); // Declare once
+const displayImage = document.getElementById('displayImage');
 const descriptionBar = document.getElementById('descriptionBar');
 const serviceImageContainer = document.querySelector('.service-image-container');
 
@@ -62,7 +62,7 @@ function updateContent(item) {
     resetTimer = setTimeout(resetToDefault, 10000);
 }
 
-// Preload images and initialize page
+// Preload images
 preloadImages();
 
 // Function to reset back to default image and text
