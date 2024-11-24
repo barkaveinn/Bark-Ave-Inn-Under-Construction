@@ -1,6 +1,6 @@
 // Select service items and display elements
 const serviceItems = document.querySelectorAll('.service-list li');
-const displayImage = document.getElementById('displayImage');
+const serviceImage = document.getElementById('serviceImage');
 const descriptionBar = document.getElementById('descriptionBar');
 const serviceImageContainer = document.querySelector('.service-image-container');
 
@@ -49,11 +49,11 @@ function updateContent(item) {
     const { image, description } = services[serviceKey];
 
     descriptionBar.style.opacity = '0';
-    displayImage.classList.remove('fade-in');
+    serviceImage.classList.remove('fade-in');
 
     setTimeout(() => {
-        displayImage.src = image;
-        displayImage.classList.add('fade-in');
+        serviceImage.src = image;
+        serviceImage.classList.add('fade-in');
         descriptionBar.textContent = description;
         descriptionBar.style.opacity = '1';
     }, 300);
@@ -67,14 +67,14 @@ preloadImages();
 
 // Function to reset back to default image and text
 function resetToDefault() {
-    displayImage.src = defaultImage;
+    serviceImage.src = defaultImage;
     descriptionBar.textContent = defaultText;
     descriptionBar.style.opacity = '1';
 }
 
 // Initialize the page with default content and set event listeners
 function initialize() {
-    displayImage.src = defaultImage;
+    serviceImage.src = defaultImage;
     descriptionBar.textContent = defaultText;
     descriptionBar.style.opacity = '1';
 
