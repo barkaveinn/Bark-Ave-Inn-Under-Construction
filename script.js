@@ -6,7 +6,7 @@ const serviceImageContainer = document.querySelector('.service-image-container')
 
 // Initial state (Default Image and Text)
 const defaultImage = "images/pexels-olly-3771110.jpg"; // Path to the default image
-const defaultText = "Welcome to The Bark Avenue Inn. Please click each of the service offerings for more details.";
+const defaultText = "Please click each of the service offerings for more details.";
 
 // Service data
 const services = {
