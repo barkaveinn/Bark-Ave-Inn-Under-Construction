@@ -64,6 +64,7 @@ function updateContent(item) {
     descriptionBar.style.opacity = '0';  // Hide description temporarily
     displayImage.classList.remove('fade-in');  // Remove fade effect from the image
 
+
     // Clear previous animation
     displayImage.classList.remove('fade-in');
     descriptionBar.style.opacity = '0';
