@@ -109,20 +109,7 @@ function initialize() {
 // Initialize when the page loads
 initialize();
 
-// Hamburger menu toggle
-document.addEventListener("DOMContentLoaded", () => {
-    const hamburger = document.querySelector("#hamburger-menu");
-    const navLinks = document.querySelector('.nav-links');
-    const body = document.body;
 
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('open'); // Toggle nav visibility
-        const isExpanded = hamburger.getAttribute("aria-expanded") === "true";
-        hamburger.classList.toggle("active");
-        body.classList.toggle('nav-open', isExpanded); // Prevent scrolling when open
-        hamburger.setAttribute("aria-expanded", !isExpanded); // Update the aria-expanded state
-    });
-});
 
 // JavaScript to toggle accordion sections
 document.querySelectorAll('.accordion-toggle').forEach(button => {
