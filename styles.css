@@ -73,40 +73,31 @@
   }
 
   .nav-links {
-    <!--  width: 100%; /* Take full width on mobile */
-    flex-direction: column; /* Stack links vertically */
-    align-items: flex-start; /* Align links to the left */ -->
-     
-    position: fixed; /* Ensure it overlays the main content */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9); /* Dark overlay */
-    transform: translateX(-100%); /* Hidden offscreen initially */
-    transition: transform 0.3s ease-in-out;
-    z-index: 1000; /* Ensure it is above other content */
-  }
+        display: flex; /* Align items horizontally */
+        flex-wrap: nowrap; /* Prevent wrapping to new lines */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        white-space: nowrap; /* Keep content in a single line */
+        padding: 10px 0; /* Add some padding for better touch usability */
+        scrollbar-width: none; /* Hide scrollbar for supported browsers */
+    }
 
-  .nav-links.open {
-      transform: translateX(0);
-  }
+    .nav-links::-webkit-scrollbar {
+        display: none; /* Hide scrollbar on WebKit browsers */
+    }
 
-  .nav-links ul {
-    flex-direction: column; /* Stack links */
-    gap: 10px; /* Reduce gap between links */
-  }
+    .nav-links a {
+        display: inline-block; /* Ensure each link behaves as an individual block */
+        padding: 10px 15px; /* Add spacing around links */
+        text-align: center; /* Center-align link text */
+        text-decoration: none; /* Remove underline */
+        color: #333; /* Default text color */
+        border-radius: 5px; /* Add slight rounding for a modern look */
+    }
 
-  .nav-links li a {
-    font-size: 18px; /* Slightly larger font for readability */
-    width: 100%; /* Ensure clickable area spans full width */
-    text-align: left; /* Align text to the left */
-    padding: 12px 15px; /* Adjust padding for easier tapping */
-  }
-
-  .nav-links li a:hover {
-    background-color: #ddd; /* Slightly darker hover effect on mobile */
-  }
+    .nav-links a:hover {
+        background-color: #f0f0f0; /* Highlight effect on hover */
+        color: #000; /* Darker text on hover */
+    }
 }
 
 
