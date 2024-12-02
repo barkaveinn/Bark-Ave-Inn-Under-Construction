@@ -26,7 +26,7 @@ const services = {
         image: "images/pexels-weddingdog.jpg",
         description: "Make your special day truly unforgettable with our Premium Wedding Dog Concierge Service. From elegant pickup to a perfectly timed walk down the aisle, we ensure your furry family member joins your celebration in style."
     },
-    In-Home Drop-in Visit: {
+    "In-Home Drop-in Visit:" {
         image: "mages/pexels-monica-3987557.jpg",
         description: "Reliable, personalized check-ins for your pet, providing feeding, walking, playtime, and companionship. Perfect for pets who prefer their home environment while you're at work or away."
     },
@@ -38,7 +38,7 @@ const services = {
         image: "images/pexels-walking.jpg",
         description: "Enjoy peace of mind knowing your dog is getting the exercise and stimulation they need with our reliable dog walking service. Each walk is tailored to your dog’s pace and preferences, giving them a healthy outing they’ll look forward to every time."
     },
-    In-Home Premium Cat Care: {
+    "In-Home Premium Cat Care:" {
         image: "images/pexels-arina-krasnikova-7725622.jpg",
         description: "Professional, loving care for your cat right in the comfort of home. From feeding and playtime to litter box maintenance, we ensure your cat feels safe and happy while you're away."
     }
