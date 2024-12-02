@@ -745,3 +745,95 @@
 .button.dashboard:hover {
     background-color: #daa520; /* Hover color */
 }
+
+
+/* Pre-pay Page Container */
+.prepay-container {
+    position: relative;
+    padding: 50px 20px;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for text readability */
+    background-image: url('images/your-background-image.jpg'); /* Replace with your actual image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Prepay Overlay for Text */
+.prepay-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Slightly darker overlay for text readability */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.prepay-overlay h1,
+.prepay-overlay h2 {
+    font-family: 'Georgia', serif; /* Or any premium font of your choice */
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.prepay-overlay p {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.prepay-overlay ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.prepay-overlay li {
+    margin-bottom: 10px;
+}
+
+/* Contact Section */
+.contact-info {
+    margin-top: 30px;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+}
+
+.contact-info a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+    .prepay-container {
+        padding: 30px 10px;
+    }
+
+    .prepay-overlay h1 {
+        font-size: 2rem;
+    }
+
+    .prepay-overlay p {
+        font-size: 1rem;
+    }
+
+    .prepay-overlay ul li {
+        font-size: 1rem;
+    }
+
+    .contact-info p {
+        font-size: 1rem;
+    }
+}
