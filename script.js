@@ -30,7 +30,7 @@ const services = {
         image: "images/pexels-monica-3987557.jpg",
         description: "Reliable, personalized check-ins for your pet, providing feeding, walking, playtime, and companionship. Perfect for pets who prefer their home environment while you're at work or away."
     },
-    Pickup and Drop-Off Service: {
+    "Pickup and Drop-Off Service": {
         image: "images/pexels-pickupdropoff.jpg",
         description: "Safe and convenient transportation for your pet's comfort and your peace of mind."
     },
