@@ -110,12 +110,6 @@ document.addEventListener("DOMContentLoaded", () => {
         body.classList.toggle('nav-open', isExpanded); // Prevent scrolling when open
         hamburger.setAttribute("aria-expanded", !isExpanded); // Update the aria-expanded state
     });
-
-    // Enable horizontal scroll for navigation links
-    const navContainer = document.querySelector('.nav-links');
-    navContainer.style.overflowX = 'auto'; // Allow horizontal scrolling
-    navContainer.style.whiteSpace = 'nowrap'; // Keep items on a single line
-    navContainer.style.display = 'flex'; // Ensure the links align horizontally
 });
 
 // JavaScript to toggle accordion sections
