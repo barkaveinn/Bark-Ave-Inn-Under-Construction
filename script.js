@@ -110,6 +110,10 @@ function initialize() {
 // Initialize when the page loads
 initialize();
 
+// Enable horizontal scrolling for nav links on smaller screens
+    if (window.innerWidth <= 768) {
+        navLinks.style.overflowX = 'auto'; // Allow horizontal scroll
+    }
 
 // JavaScript to toggle accordion sections
 document.querySelectorAll('.accordion-toggle').forEach(button => {
