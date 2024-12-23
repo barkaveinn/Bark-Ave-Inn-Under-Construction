@@ -85,7 +85,7 @@ function updateContent(item) {
 
 // Preload images and initialize page
 preloadImages();
-initialize();
+
 
 // Function to reset back to default image and text
 function resetToDefault() {
