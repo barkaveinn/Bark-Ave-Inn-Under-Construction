@@ -395,6 +395,44 @@
     align-items: center;
 }
 
+.special-boxes {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Space between boxes */
+}
+
+.special-box {
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+  color: #333; /* Text color */
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  width: 250px; /* Adjust as needed */
+}
+
+.special-box:hover {
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly darker on hover */
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .special-box {
+    width: 90%; /* Adjust for smaller screens */
+  }
+  .special-boxes {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+
+
+
 .cta-button {
     background-color: #A98F77;
     color: #000;
