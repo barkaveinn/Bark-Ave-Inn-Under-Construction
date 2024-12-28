@@ -421,14 +421,38 @@
 }
 
 @media (max-width: 768px) {
-  .special-box {
-    width: 90%; /* Adjust for smaller screens */
-  }
   .special-boxes {
-    left: 50%;
-    transform: translateX(-50%);
+    position: static; /* Remove absolute positioning for mobile */
+    display: flex; /* Arrange boxes in a row */
+    flex-direction: row;
+    justify-content: space-between; /* Space out the boxes evenly */
+    align-items: center;
+    margin-top: 20px; /* Add spacing above the boxes */
+    width: 100%; /* Ensure the boxes span the page */
+    padding: 0 10px; /* Add some padding for breathing space */
+  }
+
+  .special-box {
+    flex: 1; /* Make all boxes equal width */
+    margin: 0 5px; /* Add small spacing between boxes */
+    height: 100px; /* Set a consistent height */
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+    color: #333; /* Text color */
+    font-size: 0.9rem; /* Adjust font size for mobile */
+    font-weight: bold;
+    display: flex; /* Center-align text */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+
+  .special-box:hover {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly darker on hover */
+    cursor: pointer;
   }
 }
+
 
 
 
