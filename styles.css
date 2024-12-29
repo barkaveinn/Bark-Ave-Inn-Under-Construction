@@ -405,7 +405,7 @@
 }
 
 .special-box {
-  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+  background-color: rgba(255, 255, 255, 0.4); /* Semi-transparent white */
   color: #333; /* Text color */
   font-size: 1rem;
   font-weight: bold;
@@ -416,7 +416,7 @@
 }
 
 .special-box:hover {
-  background-color: rgba(255, 255, 255, 0.9); /* Slightly darker on hover */
+  background-color: rgba(255, 255, 255, 0.7); /* Slightly darker on hover */
   cursor: pointer;
 }
 
@@ -436,7 +436,7 @@
     flex: 1; /* Make all boxes equal width */
     margin: 0 5px; /* Add small spacing between boxes */
     height: 100px; /* Set a consistent height */
-    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+    background-color: rgba(255, 255, 255, 0.4); /* Semi-transparent white */
     color: #333; /* Text color */
     font-size: 0.9rem; /* Adjust font size for mobile */
     font-weight: bold;
@@ -448,7 +448,7 @@
   }
 
   .special-box:hover {
-    background-color: rgba(255, 255, 255, 0.9); /* Slightly darker on hover */
+    background-color: rgba(255, 255, 255, 0.7); /* Slightly darker on hover */
     cursor: pointer;
   }
 }
