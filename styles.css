@@ -434,8 +434,7 @@
     width: 100%; /* Ensure the boxes span the page */
     padding: 0 10px; /* Add some padding for breathing space */
   }
-
-  .special-box {
+    .special-box {
     flex: 1; /* Make all boxes equal width */
     margin: 0 5px; /* Add small spacing between boxes */
     height: 100px; /* Set a consistent height */
@@ -447,11 +446,13 @@
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border: 1px solid rgba(0, 0, 0, 0.2); /* Thin border for definition */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Enhanced drop shadow */
   }
-
+  
   .special-box:hover {
     background-color: rgba(255, 255, 255, 0.7); /* Slightly darker on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Slightly deeper shadow on hover */
     cursor: pointer;
   }
 }
