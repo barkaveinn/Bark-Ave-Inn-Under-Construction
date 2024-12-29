@@ -10,7 +10,7 @@
   position: sticky; /* Sticks to the top when scrolling */
   top: 0;
   width: 100%;
-  background-color: #d2cfc5; /* Clean background */
+  background-color: #d9d9d6; /* Clean background */
   display: flex;
   justify-content: space-between;
   align-items: center;
